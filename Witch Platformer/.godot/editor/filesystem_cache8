@@ -1,3 +1,392 @@
-ea4bc82a6ad023ab7ee23ee620429895
-::res://::1729114892
+2a60927148abd1d33b818b535e306557
+::res://::1729115846
 icon.svg::CompressedTexture2D::2765909328868210206::1729114890::1729114892::1::::<><>::
+::res://Assets/::1729115669
+::res://Assets/Entities/::1729115762
+::res://Assets/Entities/Flying Eye/::1729115773
+Attack3.png::CompressedTexture2D::3095550198513933002::1729115745::1729115773::1::::<><>::
+projectile_sprite.png::CompressedTexture2D::3736362049826282450::1729115745::1729115773::1::::<><>::
+::res://Assets/Entities/Goblin/::1729115773
+Attack3.png::CompressedTexture2D::3261837260605589343::1729115745::1729115773::1::::<><>::
+Bomb_sprite.png::CompressedTexture2D::6179725550511107107::1729115745::1729115773::1::::<><>::
+::res://Assets/Entities/Mushroom/::1729115773
+Attack3.png::CompressedTexture2D::4338752401639185029::1729115745::1729115773::1::::<><>::
+Projectile_sprite.png::CompressedTexture2D::5414533205890131520::1729115745::1729115773::1::::<><>::
+::res://Assets/Entities/Skeleton/::1729115773
+Attack3.png::CompressedTexture2D::2122534806678301643::1729115745::1729115773::1::::<><>::
+Sword_sprite.png::CompressedTexture2D::7435247882328573958::1729115745::1729115773::1::::<><>::
+::res://Assets/Entities/Witch/::1729115773
+W_witch_attack.png::CompressedTexture2D::8425160879984821810::1729049973::1729115773::1::::<><>::
+W_witch_charge.png::CompressedTexture2D::5813148527911151640::1729049973::1729115773::1::::<><>::
+W_witch_idle.png::CompressedTexture2D::491005329623344463::1729049973::1729115773::1::::<><>::
+W_witch_run.png::CompressedTexture2D::4433267628010150071::1729049973::1729115773::1::::<><>::
+W_witch_take_damage.png::CompressedTexture2D::2058893758856334053::1729049973::1729115773::1::::<><>::
+W_witch_take_death.png::CompressedTexture2D::4353321658036311963::1729049973::1729115773::1::::<><>::
+::res://Assets/Spells/::1729115682
+::res://Assets/Spells/Tabletop Spellbook - Asset Pack 1.0/::1729115683
+::res://Assets/Spells/Tabletop Spellbook - Asset Pack 1.0/Anguish/::1729115774
+Anguish 0001.png::CompressedTexture2D::8876004072591529597::1729049978::1729115774::1::::<><>::
+Anguish 0002.png::CompressedTexture2D::3449137419879495891::1729049978::1729115774::1::::<><>::
+Anguish 0003.png::CompressedTexture2D::5182578458330683420::1729049978::1729115774::1::::<><>::
+Anguish 0004.png::CompressedTexture2D::4491268492694173001::1729049978::1729115774::1::::<><>::
+Anguish 0005.png::CompressedTexture2D::8888574194040973967::1729049978::1729115774::1::::<><>::
+Anguish 0006.png::CompressedTexture2D::8435752527763018064::1729049978::1729115774::1::::<><>::
+Anguish 0007.png::CompressedTexture2D::4310262910610806343::1729049978::1729115774::1::::<><>::
+Anguish 0008.png::CompressedTexture2D::4298882121028310554::1729049978::1729115774::1::::<><>::
+Anguish 0009.png::CompressedTexture2D::8459046749162568389::1729049978::1729115774::1::::<><>::
+Anguish 0010.png::CompressedTexture2D::2355277987079835430::1729049978::1729115774::1::::<><>::
+Anguish 0011.png::CompressedTexture2D::1859537394280962721::1729049978::1729115774::1::::<><>::
+Anguish 0012.png::CompressedTexture2D::4264257435804743973::1729049978::1729115774::1::::<><>::
+Anguish 0013.png::CompressedTexture2D::4162396342992628661::1729049978::1729115774::1::::<><>::
+Anguish Icon.PNG::CompressedTexture2D::1418411102060567521::1729049978::1729115774::1::::<><>::
+::res://Assets/Spells/Tabletop Spellbook - Asset Pack 1.0/Atrophy/::1729115774
+Atrophy 0001.png::CompressedTexture2D::2346943017292083678::1729049978::1729115774::1::::<><>::
+Atrophy 0002.png::CompressedTexture2D::8306440418712004676::1729049978::1729115774::1::::<><>::
+Atrophy 0003.png::CompressedTexture2D::5808724958123221960::1729049978::1729115774::1::::<><>::
+Atrophy 0004.png::CompressedTexture2D::1070292325168024475::1729049978::1729115774::1::::<><>::
+Atrophy 0005.png::CompressedTexture2D::5460660150155032406::1729049978::1729115774::1::::<><>::
+Atrophy 0006.png::CompressedTexture2D::5863598066669283543::1729049978::1729115774::1::::<><>::
+Atrophy 0007.png::CompressedTexture2D::3337039896890900211::1729049978::1729115774::1::::<><>::
+Atrophy 0008.png::CompressedTexture2D::1247279845116265785::1729049978::1729115774::1::::<><>::
+Atrophy 0009.png::CompressedTexture2D::8251713382237287325::1729049978::1729115774::1::::<><>::
+Atrophy 0010.png::CompressedTexture2D::2320457920080043430::1729049978::1729115774::1::::<><>::
+Atrophy Icon.PNG::CompressedTexture2D::3350380063579866780::1729049978::1729115774::1::::<><>::
+::res://Assets/Spells/Tabletop Spellbook - Asset Pack 1.0/Blood Pact/::1729115774
+Blood Pact 0001.png::CompressedTexture2D::3030447336245048708::1729049978::1729115774::1::::<><>::
+Blood Pact 0002.png::CompressedTexture2D::8631074426217802457::1729049978::1729115774::1::::<><>::
+Blood Pact 0003.png::CompressedTexture2D::2173880700934427123::1729049978::1729115774::1::::<><>::
+Blood Pact 0004.png::CompressedTexture2D::732547090340472332::1729049978::1729115774::1::::<><>::
+Blood Pact 0005.png::CompressedTexture2D::6074779275397108839::1729049978::1729115774::1::::<><>::
+Blood Pact 0006.png::CompressedTexture2D::9051193603536443507::1729049978::1729115774::1::::<><>::
+Blood Pact 0007.png::CompressedTexture2D::6853428937377527891::1729049978::1729115774::1::::<><>::
+Blood Pact 0008.png::CompressedTexture2D::5519077386368691781::1729049978::1729115774::1::::<><>::
+Blood Pact 0009.png::CompressedTexture2D::7674940986479286871::1729049978::1729115774::1::::<><>::
+Blood Pact 0010.png::CompressedTexture2D::4206630877666752132::1729049978::1729115774::1::::<><>::
+Blood Pact 0011.png::CompressedTexture2D::7805121925009183407::1729049978::1729115774::1::::<><>::
+Blood Pact Icon.PNG::CompressedTexture2D::8567619942707010330::1729049978::1729115774::1::::<><>::
+::res://Assets/Spells/Tabletop Spellbook - Asset Pack 1.0/Branding Fire/::1729115774
+Branding Fire 0001.png::CompressedTexture2D::6261062134123334632::1729049978::1729115774::1::::<><>::
+Branding Fire 0002.png::CompressedTexture2D::9047596170944871819::1729049978::1729115774::1::::<><>::
+Branding Fire 0003.png::CompressedTexture2D::8470296181833250743::1729049978::1729115774::1::::<><>::
+Branding Fire 0004.png::CompressedTexture2D::2837643921659818916::1729049978::1729115774::1::::<><>::
+Branding Fire 0005.png::CompressedTexture2D::3973310842562156249::1729049978::1729115774::1::::<><>::
+Branding Fire 0006.png::CompressedTexture2D::644154786766812444::1729049978::1729115774::1::::<><>::
+Branding Fire 0007.png::CompressedTexture2D::4751695350581765203::1729049978::1729115774::1::::<><>::
+Branding Fire 0008.png::CompressedTexture2D::2303473008316878353::1729049978::1729115774::1::::<><>::
+Branding Fire 0009.png::CompressedTexture2D::8114366271956774949::1729049978::1729115774::1::::<><>::
+Branding Fire 0010.png::CompressedTexture2D::2190128995379240783::1729049978::1729115774::1::::<><>::
+Branding Fire 0011.png::CompressedTexture2D::6411429306323456809::1729049978::1729115774::1::::<><>::
+Branding Fire 0012.png::CompressedTexture2D::5444327751052770183::1729049978::1729115774::1::::<><>::
+Branding Fire 0013.png::CompressedTexture2D::6344513599558708646::1729049978::1729115774::1::::<><>::
+Branding Fire 0014.png::CompressedTexture2D::6776079872148399609::1729049978::1729115774::1::::<><>::
+Branding Fire 0015.png::CompressedTexture2D::2348457748351319350::1729049978::1729115774::1::::<><>::
+Branding Fire 0016.png::CompressedTexture2D::7822223080302194725::1729049978::1729115774::1::::<><>::
+Branding Fire 0017.png::CompressedTexture2D::6913699087813134933::1729049978::1729115774::1::::<><>::
+Branding Fire 0018.png::CompressedTexture2D::4666783937933718556::1729049978::1729115774::1::::<><>::
+Branding Fire 0019.png::CompressedTexture2D::5750202923197295334::1729049978::1729115774::1::::<><>::
+Branding Fire Icon.PNG::CompressedTexture2D::6507930817293775711::1729049978::1729115774::1::::<><>::
+::res://Assets/Spells/Tabletop Spellbook - Asset Pack 1.0/Brittle Armor/::1729115774
+Brittle Armor 0001.png::CompressedTexture2D::7909723651472076831::1729049978::1729115774::1::::<><>::
+Brittle Armor 0002.png::CompressedTexture2D::6027090077910032128::1729049978::1729115774::1::::<><>::
+Brittle Armor 0003.png::CompressedTexture2D::9122058196454852851::1729049978::1729115774::1::::<><>::
+Brittle Armor 0004.png::CompressedTexture2D::5649200900395734570::1729049978::1729115774::1::::<><>::
+Brittle Armor 0005.png::CompressedTexture2D::1304978166529163606::1729049978::1729115774::1::::<><>::
+Brittle Armor 0006.png::CompressedTexture2D::7468043952577257620::1729049978::1729115774::1::::<><>::
+Brittle Armor Icon.PNG::CompressedTexture2D::6204570790383692481::1729049978::1729115774::1::::<><>::
+::res://Assets/Spells/Tabletop Spellbook - Asset Pack 1.0/Brutal Swipe/::1729115774
+Brutal Swipe 0001.png::CompressedTexture2D::6701929342573699437::1729049978::1729115774::1::::<><>::
+Brutal Swipe 0002.png::CompressedTexture2D::831631823286359329::1729049978::1729115774::1::::<><>::
+Brutal Swipe 0003.png::CompressedTexture2D::5506621783286979147::1729049978::1729115774::1::::<><>::
+Brutal Swipe 0004.png::CompressedTexture2D::878165299550266383::1729049978::1729115774::1::::<><>::
+Brutal Swipe 0005.png::CompressedTexture2D::4912760018881373139::1729049978::1729115774::1::::<><>::
+Brutal Swipe Icon.PNG::CompressedTexture2D::7482742008783793707::1729049978::1729115774::1::::<><>::
+::res://Assets/Spells/Tabletop Spellbook - Asset Pack 1.0/Change Of Heart/::1729115774
+Change of Heart 0001.png::CompressedTexture2D::1269285562159305025::1729049978::1729115774::1::::<><>::
+Change of Heart 0002.png::CompressedTexture2D::5145582845460626570::1729049978::1729115774::1::::<><>::
+Change of Heart 0003.png::CompressedTexture2D::6997677876672131444::1729049978::1729115774::1::::<><>::
+Change of Heart 0004.png::CompressedTexture2D::5076926459872204871::1729049978::1729115774::1::::<><>::
+Change of Heart 0005.png::CompressedTexture2D::5799466223505813700::1729049978::1729115774::1::::<><>::
+Change of Heart 0006.png::CompressedTexture2D::6989309724157160488::1729049978::1729115774::1::::<><>::
+Change of Heart 0007.png::CompressedTexture2D::8902801812595271226::1729049978::1729115774::1::::<><>::
+Change of Heart 0008.png::CompressedTexture2D::694333602777870919::1729049978::1729115774::1::::<><>::
+Change of Heart 0009.png::CompressedTexture2D::6809470437685142929::1729049978::1729115774::1::::<><>::
+Change of Heart 0010.png::CompressedTexture2D::4722924789119976116::1729049978::1729115774::1::::<><>::
+Change of Heart Icon.PNG::CompressedTexture2D::7536718863398911196::1729049978::1729115774::1::::<><>::
+::res://Assets/Spells/Tabletop Spellbook - Asset Pack 1.0/Divine Protection/::1729115774
+Divine Protection 0001.png::CompressedTexture2D::7850951860460488958::1729049978::1729115774::1::::<><>::
+Divine Protection 0002.png::CompressedTexture2D::1666644981715368062::1729049978::1729115774::1::::<><>::
+Divine Protection 0003.png::CompressedTexture2D::4907966391531370645::1729049979::1729115774::1::::<><>::
+Divine Protection 0004.png::CompressedTexture2D::9221220331424986124::1729049979::1729115774::1::::<><>::
+Divine Protection Icon.PNG::CompressedTexture2D::1332786989522720321::1729049979::1729115774::1::::<><>::
+::res://Assets/Spells/Tabletop Spellbook - Asset Pack 1.0/Earth Spike/::1729115774
+Earth Spike 0001.png::CompressedTexture2D::8373897421403141521::1729049979::1729115774::1::::<><>::
+Earth Spike 0002.png::CompressedTexture2D::6530946692149294965::1729049979::1729115774::1::::<><>::
+Earth Spike 0003.png::CompressedTexture2D::3131720731328640209::1729049979::1729115774::1::::<><>::
+Earth Spike 0004.png::CompressedTexture2D::3892048110649651723::1729049979::1729115774::1::::<><>::
+Earth Spike 0005.png::CompressedTexture2D::1302082453901949638::1729049979::1729115774::1::::<><>::
+Earth Spike 0006.png::CompressedTexture2D::4020763906901153203::1729049979::1729115774::1::::<><>::
+Earth Spike 0007.png::CompressedTexture2D::468415935130366519::1729049979::1729115774::1::::<><>::
+Earth Spike Icon.PNG::CompressedTexture2D::2442943265516612072::1729049979::1729115774::1::::<><>::
+::res://Assets/Spells/Tabletop Spellbook - Asset Pack 1.0/Fireball/::1729115774
+Fireball 0001.png::CompressedTexture2D::8086333436316495410::1729049979::1729115774::1::::<><>::
+Fireball 0002.png::CompressedTexture2D::2149739814347619169::1729049979::1729115774::1::::<><>::
+Fireball 0003.png::CompressedTexture2D::4171720340404843435::1729049979::1729115774::1::::<><>::
+Fireball 0004.png::CompressedTexture2D::5466680518545166006::1729049979::1729115774::1::::<><>::
+Fireball 0005.png::CompressedTexture2D::2160045945483067770::1729049979::1729115774::1::::<><>::
+Fireball 0006.png::CompressedTexture2D::223951343859589187::1729049979::1729115774::1::::<><>::
+Fireball 0007.png::CompressedTexture2D::2346635411428973923::1729049979::1729115774::1::::<><>::
+Fireball 0008.png::CompressedTexture2D::2333086920091351115::1729049979::1729115774::1::::<><>::
+Fireball 0009.png::CompressedTexture2D::1108744688473510184::1729049979::1729115774::1::::<><>::
+Fireball 0010.png::CompressedTexture2D::8201873024186941550::1729049979::1729115774::1::::<><>::
+Fireball 0011.png::CompressedTexture2D::1395296614278272052::1729049979::1729115774::1::::<><>::
+Fireball 0012.png::CompressedTexture2D::6133010547990495661::1729049979::1729115774::1::::<><>::
+Fireball Icon.PNG::CompressedTexture2D::1272804553990545283::1729049979::1729115774::1::::<><>::
+::res://Assets/Spells/Tabletop Spellbook - Asset Pack 1.0/Flamin'/::1729115774
+Flamin' 0001.png::CompressedTexture2D::4369985477776291333::1729049979::1729115774::1::::<><>::
+Flamin' 0002.png::CompressedTexture2D::24288368677547059::1729049979::1729115774::1::::<><>::
+Flamin' 0003.png::CompressedTexture2D::2372253043151258402::1729049979::1729115774::1::::<><>::
+Flamin' 0004.png::CompressedTexture2D::583640140270173118::1729049979::1729115774::1::::<><>::
+Flamin' 0005.png::CompressedTexture2D::368535701369935720::1729049979::1729115774::1::::<><>::
+Flamin' 0006.png::CompressedTexture2D::2891744663920905218::1729049979::1729115774::1::::<><>::
+Flamin' 0007.png::CompressedTexture2D::6919633033051748060::1729049979::1729115774::1::::<><>::
+Flamin' 0008.png::CompressedTexture2D::3303366195806727267::1729049979::1729115774::1::::<><>::
+Flamin' Icon.PNG::CompressedTexture2D::5520552507767061092::1729049979::1729115774::1::::<><>::
+::res://Assets/Spells/Tabletop Spellbook - Asset Pack 1.0/Frostbite/::1729115774
+Frostbite 0001.png::CompressedTexture2D::6174691390882694159::1729049979::1729115774::1::::<><>::
+Frostbite 0002.png::CompressedTexture2D::9071543059134666006::1729049979::1729115774::1::::<><>::
+Frostbite 0003.png::CompressedTexture2D::6121046014345757621::1729049979::1729115774::1::::<><>::
+Frostbite 0004.png::CompressedTexture2D::758441775599872275::1729049979::1729115774::1::::<><>::
+Frostbite 0005.png::CompressedTexture2D::6656689666289605748::1729049979::1729115774::1::::<><>::
+Frostbite 0006.png::CompressedTexture2D::1904435411205209145::1729049979::1729115774::1::::<><>::
+Frostbite 0007.png::CompressedTexture2D::7848550370556863507::1729049979::1729115774::1::::<><>::
+Frostbite Icon.PNG::CompressedTexture2D::8595634257976754769::1729049979::1729115774::1::::<><>::
+::res://Assets/Spells/Tabletop Spellbook - Asset Pack 1.0/Galvanize/::1729115774
+Galvanize0001.png::CompressedTexture2D::2184365512726625102::1729049979::1729115774::1::::<><>::
+Galvanize0002.png::CompressedTexture2D::3518902442415146843::1729049979::1729115774::1::::<><>::
+Galvanize0003.png::CompressedTexture2D::5304307352896350561::1729049979::1729115774::1::::<><>::
+Galvanize0004.png::CompressedTexture2D::8575897232598391658::1729049979::1729115774::1::::<><>::
+Galvanize0005.png::CompressedTexture2D::6483366697783341739::1729049979::1729115774::1::::<><>::
+Galvanize0006.png::CompressedTexture2D::6702421053442144801::1729049979::1729115774::1::::<><>::
+Galvanize0007.png::CompressedTexture2D::8592070554479963632::1729049979::1729115774::1::::<><>::
+Galvanize0008.png::CompressedTexture2D::8501472257840007017::1729049979::1729115774::1::::<><>::
+Galvanize0009.png::CompressedTexture2D::8123984429053997825::1729049979::1729115774::1::::<><>::
+Galvanize0010.png::CompressedTexture2D::2348415548755783942::1729049979::1729115774::1::::<><>::
+Galvanize0011.png::CompressedTexture2D::2360357709588129908::1729049979::1729115774::1::::<><>::
+Galvanize Icon.PNG::CompressedTexture2D::5244252888585887748::1729049979::1729115774::1::::<><>::
+::res://Assets/Spells/Tabletop Spellbook - Asset Pack 1.0/Hellfire/::1729115774
+Hellfire 0001.png::CompressedTexture2D::6024682174886639394::1729049979::1729115774::1::::<><>::
+Hellfire 0002.png::CompressedTexture2D::9206527277359211666::1729049979::1729115774::1::::<><>::
+Hellfire 0003.png::CompressedTexture2D::4930769112254647413::1729049979::1729115774::1::::<><>::
+Hellfire 0004.png::CompressedTexture2D::2069140486183712103::1729049979::1729115774::1::::<><>::
+Hellfire 0005.png::CompressedTexture2D::792854652923211908::1729049979::1729115774::1::::<><>::
+Hellfire 0006.png::CompressedTexture2D::1908506385233662747::1729049979::1729115774::1::::<><>::
+Hellfire 0007.png::CompressedTexture2D::6555169967519056053::1729049979::1729115774::1::::<><>::
+Hellfire 0008.png::CompressedTexture2D::5869726439022573367::1729049979::1729115774::1::::<><>::
+Hellfire 0009.png::CompressedTexture2D::5827228336804857596::1729049979::1729115774::1::::<><>::
+Hellfire 0010.png::CompressedTexture2D::4639903547474124215::1729049979::1729115774::1::::<><>::
+Hellfire 0011.png::CompressedTexture2D::5823543363680048123::1729049979::1729115774::1::::<><>::
+Hellfire 0012.png::CompressedTexture2D::6558066254229783740::1729049979::1729115774::1::::<><>::
+Hellfire 0013.png::CompressedTexture2D::1212472779845379309::1729049979::1729115774::1::::<><>::
+Hellfire 0014.png::CompressedTexture2D::7540762190338952475::1729049979::1729115774::1::::<><>::
+Hellfire 0015.png::CompressedTexture2D::3747077914327142452::1729049979::1729115774::1::::<><>::
+Hellfire Icon.PNG::CompressedTexture2D::4479291172912983998::1729049979::1729115774::1::::<><>::
+::res://Assets/Spells/Tabletop Spellbook - Asset Pack 1.0/Ice Spire/::1729115774
+Ice Spire 0001.png::CompressedTexture2D::6321483421908496739::1729049979::1729115774::1::::<><>::
+Ice Spire 0002.png::CompressedTexture2D::3361925802344685560::1729049979::1729115774::1::::<><>::
+Ice Spire 0003.png::CompressedTexture2D::928282018676370563::1729049979::1729115774::1::::<><>::
+Ice Spire 0004.png::CompressedTexture2D::4840339210438864344::1729049979::1729115774::1::::<><>::
+Ice Spire 0005.png::CompressedTexture2D::1568752713675970829::1729049979::1729115774::1::::<><>::
+Ice Spire 0006.png::CompressedTexture2D::4433036211851869972::1729049979::1729115774::1::::<><>::
+Ice Spire 0007.png::CompressedTexture2D::4131924504566009526::1729049979::1729115774::1::::<><>::
+Ice Spire 0008.png::CompressedTexture2D::2298844463517260620::1729049979::1729115774::1::::<><>::
+Ice Spire 0009.png::CompressedTexture2D::4212187435114358743::1729049979::1729115774::1::::<><>::
+Ice Spire 0010.png::CompressedTexture2D::6632782679605007062::1729049979::1729115774::1::::<><>::
+Ice Spire Icon.PNG::CompressedTexture2D::6680753620420681007::1729049979::1729115774::1::::<><>::
+::res://Assets/Spells/Tabletop Spellbook - Asset Pack 1.0/Lightning Rod/::1729115774
+Lightning Rod 0001.png::CompressedTexture2D::4737775668048419949::1729049979::1729115774::1::::<><>::
+Lightning Rod 0002.png::CompressedTexture2D::5552031722980457808::1729049979::1729115774::1::::<><>::
+Lightning Rod 0003.png::CompressedTexture2D::890773285270430220::1729049979::1729115774::1::::<><>::
+Lightning Rod 0004.png::CompressedTexture2D::5577297590251197254::1729049979::1729115773::1::::<><>::
+Lightning Rod 0005.png::CompressedTexture2D::7411353837450685173::1729049979::1729115773::1::::<><>::
+Lightning Rod 0006.png::CompressedTexture2D::107821967205322222::1729049979::1729115773::1::::<><>::
+Lightning Rod 0007.png::CompressedTexture2D::6463586182476468336::1729049979::1729115773::1::::<><>::
+Lightning Rod 0008.png::CompressedTexture2D::5305468838612964655::1729049980::1729115773::1::::<><>::
+Lightning Rod 0009.png::CompressedTexture2D::419483628099252531::1729049980::1729115773::1::::<><>::
+Lightning Rod Icon.PNG::CompressedTexture2D::6728749497933707470::1729049980::1729115773::1::::<><>::
+::res://Assets/Spells/Tabletop Spellbook - Asset Pack 1.0/Magma Shield/::1729115773
+Magma Shield 0001.png::CompressedTexture2D::6254941738823502833::1729049980::1729115773::1::::<><>::
+Magma Shield 0002.png::CompressedTexture2D::73667140474967751::1729049980::1729115773::1::::<><>::
+Magma Shield 0003.png::CompressedTexture2D::4478020386992693882::1729049980::1729115773::1::::<><>::
+Magma Shield 0004.png::CompressedTexture2D::7656333130953965687::1729049980::1729115773::1::::<><>::
+Magma Shield 0005.png::CompressedTexture2D::1265641405858183620::1729049980::1729115773::1::::<><>::
+Magma Shield 0006.png::CompressedTexture2D::6466926232153943431::1729049980::1729115773::1::::<><>::
+Magma Shield 0007.png::CompressedTexture2D::791951704826510141::1729049980::1729115773::1::::<><>::
+Magma Shield 0008.png::CompressedTexture2D::8488082196151326690::1729049980::1729115773::1::::<><>::
+Magma Shield 0009.png::CompressedTexture2D::3732208645797200620::1729049980::1729115773::1::::<><>::
+Magma Shield 0010.png::CompressedTexture2D::8205307716898703147::1729049980::1729115773::1::::<><>::
+Magma Shield Icon.PNG::CompressedTexture2D::4104675347345870497::1729049980::1729115773::1::::<><>::
+::res://Assets/Spells/Tabletop Spellbook - Asset Pack 1.0/Plagued/::1729115773
+Plagued 0001.png::CompressedTexture2D::3213677153201344089::1729049980::1729115773::1::::<><>::
+Plagued 0002.png::CompressedTexture2D::8641065184779819279::1729049980::1729115773::1::::<><>::
+Plagued 0003.png::CompressedTexture2D::4119311000113180384::1729049980::1729115773::1::::<><>::
+Plagued 0004.png::CompressedTexture2D::8886984534256842855::1729049980::1729115773::1::::<><>::
+Plagued 0005.png::CompressedTexture2D::2432278251703683737::1729049980::1729115773::1::::<><>::
+Plagued 0006.png::CompressedTexture2D::31357668734252633::1729049980::1729115773::1::::<><>::
+Plagued 0007.png::CompressedTexture2D::471808612672030200::1729049980::1729115773::1::::<><>::
+Plagued 0008.png::CompressedTexture2D::8047544249866396365::1729049980::1729115773::1::::<><>::
+Plagued Icon.png::CompressedTexture2D::1465062156792040507::1729049980::1729115773::1::::<><>::
+::res://Assets/Spells/Tabletop Spellbook - Asset Pack 1.0/Plasma Storm/::1729115773
+Plasma Storm 0001.png::CompressedTexture2D::5172180099724728715::1729049980::1729115773::1::::<><>::
+Plasma Storm 0002.png::CompressedTexture2D::5538433960710966843::1729049980::1729115773::1::::<><>::
+Plasma Storm 0003.png::CompressedTexture2D::6326868585628327589::1729049980::1729115773::1::::<><>::
+Plasma Storm 0004.png::CompressedTexture2D::2614577563859919488::1729049980::1729115773::1::::<><>::
+Plasma Storm 0005.png::CompressedTexture2D::2646642466603207394::1729049980::1729115773::1::::<><>::
+Plasma Storm 0006.png::CompressedTexture2D::247565054088740783::1729049980::1729115773::1::::<><>::
+Plasma Storm 0007.png::CompressedTexture2D::8814639080299414153::1729049980::1729115773::1::::<><>::
+Plasma Storm 0008.png::CompressedTexture2D::2243539655196526249::1729049980::1729115773::1::::<><>::
+Plasma Storm 0009.png::CompressedTexture2D::8398921595775766267::1729049980::1729115773::1::::<><>::
+Plasma Storm 0010.png::CompressedTexture2D::3758645240085774745::1729049980::1729115773::1::::<><>::
+Plasma Storm 0011.png::CompressedTexture2D::6570977389557479269::1729049980::1729115773::1::::<><>::
+Plasma Storm Icon.PNG::CompressedTexture2D::8168311231403786778::1729049980::1729115773::1::::<><>::
+::res://Assets/Spells/Tabletop Spellbook - Asset Pack 1.0/Rupture/::1729115773
+Rupture 0001.png::CompressedTexture2D::708341940346188081::1729049980::1729115773::1::::<><>::
+Rupture 0002.png::CompressedTexture2D::2271192235330790962::1729049980::1729115773::1::::<><>::
+Rupture 0003.png::CompressedTexture2D::2890434225422691718::1729049980::1729115773::1::::<><>::
+Rupture 0004.png::CompressedTexture2D::1582247406884595013::1729049980::1729115773::1::::<><>::
+Rupture 0005.png::CompressedTexture2D::7739322313658789042::1729049980::1729115773::1::::<><>::
+Rupture 0006.png::CompressedTexture2D::5462583141945323674::1729049980::1729115773::1::::<><>::
+Rupture 0007.png::CompressedTexture2D::8914996072959035478::1729049980::1729115773::1::::<><>::
+Rupture Icon.PNG::CompressedTexture2D::5124753197210670390::1729049980::1729115773::1::::<><>::
+::res://Assets/Spells/Tabletop Spellbook - Asset Pack 1.0/Soul Siphon/::1729115773
+Soul Siphon 0001.png::CompressedTexture2D::6330021960363841360::1729049980::1729115773::1::::<><>::
+Soul Siphon 0002.png::CompressedTexture2D::5493092115098319207::1729049980::1729115773::1::::<><>::
+Soul Siphon 0003.png::CompressedTexture2D::3817586428345674374::1729049980::1729115773::1::::<><>::
+Soul Siphon 0004.png::CompressedTexture2D::4139749043704786848::1729049980::1729115773::1::::<><>::
+Soul Siphon 0005.png::CompressedTexture2D::3466262754047309364::1729049980::1729115773::1::::<><>::
+Soul Siphon 0006.png::CompressedTexture2D::7397896196512571151::1729049980::1729115773::1::::<><>::
+Soul Siphon 0007.png::CompressedTexture2D::2497872953312196078::1729049980::1729115773::1::::<><>::
+Soul Siphon 0008.png::CompressedTexture2D::8066839363574230494::1729049980::1729115773::1::::<><>::
+Soul Siphon 0009.png::CompressedTexture2D::300685046603298853::1729049980::1729115773::1::::<><>::
+Soul Siphon 0010.png::CompressedTexture2D::8778603282830275177::1729049980::1729115773::1::::<><>::
+Soul Siphon Icon.PNG::CompressedTexture2D::720017646510247071::1729049980::1729115773::1::::<><>::
+::res://Assets/Spells/Tabletop Spellbook - Asset Pack 1.0/Swift Slash/::1729115773
+Swift Slash 0001.png::CompressedTexture2D::4977308924217388534::1729049980::1729115773::1::::<><>::
+Swift Slash 0002.png::CompressedTexture2D::521608787972935733::1729049980::1729115773::1::::<><>::
+Swift Slash 0003.png::CompressedTexture2D::4884093002825582908::1729049980::1729115773::1::::<><>::
+Swift Slash 0004.png::CompressedTexture2D::1535998371793502217::1729049980::1729115773::1::::<><>::
+Swift Slash 0005.png::CompressedTexture2D::3504013268781108851::1729049980::1729115773::1::::<><>::
+Swift Slash Icon.PNG::CompressedTexture2D::3692180662655539417::1729049980::1729115773::1::::<><>::
+::res://Assets/Spells/Tabletop Spellbook - Asset Pack 1.0/Tanglevine/::1729115773
+Tanglevine 0001.png::CompressedTexture2D::406241934318578964::1729049980::1729115773::1::::<><>::
+Tanglevine 0002.png::CompressedTexture2D::2897373179618091184::1729049980::1729115773::1::::<><>::
+Tanglevine 0003.png::CompressedTexture2D::1682002678697669420::1729049980::1729115773::1::::<><>::
+Tanglevine 0004.png::CompressedTexture2D::1441936270838786385::1729049980::1729115773::1::::<><>::
+Tanglevine 0005.png::CompressedTexture2D::1066280005409655809::1729049980::1729115773::1::::<><>::
+Tanglevine 0006.png::CompressedTexture2D::8498811137138827926::1729049980::1729115773::1::::<><>::
+Tanglevine Icon.PNG::CompressedTexture2D::5658941744815187550::1729049980::1729115773::1::::<><>::
+::res://Assets/Spells/Tabletop Spellbook - Asset Pack 1.0/Tidal Wave/::1729115774
+Tidal Wave 0001.png::CompressedTexture2D::4730752715482542681::1729049980::1729115773::1::::<><>::
+Tidal Wave 0002.png::CompressedTexture2D::1836199948061425581::1729049980::1729115773::1::::<><>::
+Tidal Wave 0003.png::CompressedTexture2D::7660882342663687549::1729049980::1729115773::1::::<><>::
+Tidal Wave 0004.png::CompressedTexture2D::3137244917016089190::1729049980::1729115773::1::::<><>::
+Tidal Wave 0005.png::CompressedTexture2D::6302813763525157508::1729049980::1729115773::1::::<><>::
+Tidal Wave 0006.png::CompressedTexture2D::8037685546680022612::1729049980::1729115773::1::::<><>::
+Tidal Wave 0007.png::CompressedTexture2D::8557262317770246643::1729049980::1729115773::1::::<><>::
+Tidal Wave 0008.png::CompressedTexture2D::5164733456628193360::1729049980::1729115773::1::::<><>::
+Tidal Wave 0009.png::CompressedTexture2D::2613604375997364439::1729049980::1729115773::1::::<><>::
+Tidal Wave 0010.png::CompressedTexture2D::7302799195118420589::1729049980::1729115773::1::::<><>::
+Tidal Wave 0011.png::CompressedTexture2D::4481046839381436901::1729049980::1729115773::1::::<><>::
+Tidal Wave 0012.png::CompressedTexture2D::9172566302462192098::1729049980::1729115774::1::::<><>::
+Tidal Wave 0013.png::CompressedTexture2D::4177751994105712413::1729049980::1729115774::1::::<><>::
+Tidal Wave 0014.png::CompressedTexture2D::7241291775075974451::1729049980::1729115774::1::::<><>::
+Tidal Wave Icon.PNG::CompressedTexture2D::8910207313161980918::1729049980::1729115774::1::::<><>::
+::res://Assets/Spells/Tabletop Spellbook - Asset Pack 1.0/Toxicity/::1729115774
+Toxicity 0001.png::CompressedTexture2D::3001378200350834405::1729049980::1729115774::1::::<><>::
+Toxicity 0002.png::CompressedTexture2D::8834799136811627223::1729049980::1729115774::1::::<><>::
+Toxicity 0003.png::CompressedTexture2D::886357150546984680::1729049980::1729115774::1::::<><>::
+Toxicity 0004.png::CompressedTexture2D::8986592048447233406::1729049981::1729115774::1::::<><>::
+Toxicity 0005.png::CompressedTexture2D::6445634723343164208::1729049981::1729115774::1::::<><>::
+Toxicity 0006.png::CompressedTexture2D::2419309677908737851::1729049981::1729115774::1::::<><>::
+Toxicity 0007.png::CompressedTexture2D::4285305581866732982::1729049981::1729115774::1::::<><>::
+Toxicity 0008.png::CompressedTexture2D::2693134355187907526::1729049981::1729115774::1::::<><>::
+Toxicity 0009.png::CompressedTexture2D::4506681833897575848::1729049981::1729115773::1::::<><>::
+Toxicity 0010.png::CompressedTexture2D::3447152420601771758::1729049981::1729115773::1::::<><>::
+Toxicity Icon.png::CompressedTexture2D::3119671338649886287::1729049981::1729115773::1::::<><>::
+::res://Assets/Spells/Tabletop Spellbook - Asset Pack 1.0/Vampirism/::1729115773
+Vampirism 0001.png::CompressedTexture2D::4363887262256536503::1729049981::1729115773::1::::<><>::
+Vampirism 0002.png::CompressedTexture2D::7963973096340934818::1729049981::1729115773::1::::<><>::
+Vampirism 0003.png::CompressedTexture2D::1772867729119750686::1729049981::1729115773::1::::<><>::
+Vampirism 0004.png::CompressedTexture2D::4818138544091884393::1729049981::1729115773::1::::<><>::
+Vampirism 0005.png::CompressedTexture2D::7700792171170685301::1729049981::1729115773::1::::<><>::
+Vampirism Icon.PNG::CompressedTexture2D::8925569583102113475::1729049981::1729115773::1::::<><>::
+::res://Assets/Spells/Tabletop Spellbook - Asset Pack 1.0/Wither/::1729115774
+Wither 0001.png::CompressedTexture2D::8738917453527677596::1729049981::1729115774::1::::<><>::
+Wither 0002.png::CompressedTexture2D::5351785812361171717::1729049981::1729115774::1::::<><>::
+Wither 0003.png::CompressedTexture2D::824424622591338687::1729049981::1729115774::1::::<><>::
+Wither 0004.png::CompressedTexture2D::3153843469038198201::1729049981::1729115774::1::::<><>::
+Wither 0005.png::CompressedTexture2D::8644671613813299683::1729049981::1729115774::1::::<><>::
+Wither 0006.png::CompressedTexture2D::1363072551309432774::1729049981::1729115774::1::::<><>::
+Wither 0007.png::CompressedTexture2D::6521791070508739798::1729049981::1729115774::1::::<><>::
+Wither 0008.png::CompressedTexture2D::9093858799479937934::1729049981::1729115774::1::::<><>::
+Wither 0009.png::CompressedTexture2D::620217274287718051::1729049981::1729115774::1::::<><>::
+Wither 0010.png::CompressedTexture2D::7705080473716873291::1729049981::1729115774::1::::<><>::
+Wither 0011.png::CompressedTexture2D::5485790047605615386::1729049981::1729115774::1::::<><>::
+Wither Icon.PNG::CompressedTexture2D::2768426607483968785::1729049981::1729115774::1::::<><>::
+::res://Assets/Spells/Tabletop Spellbook - Card Frames 1.0/::1729115774
+Card Death.PNG::CompressedTexture2D::1955545788013804551::1729115656::1729115774::1::::<><>::
+Card Earth.PNG::CompressedTexture2D::37072092872352159::1729115656::1729115774::1::::<><>::
+Card Faith.PNG::CompressedTexture2D::7229356813406402541::1729115656::1729115774::1::::<><>::
+Card Fire.PNG::CompressedTexture2D::1251142241878326400::1729115656::1729115774::1::::<><>::
+Card Ice.PNG::CompressedTexture2D::3738501449188787571::1729115656::1729115774::1::::<><>::
+Card Lightning.PNG::CompressedTexture2D::1351184526317996010::1729115656::1729115774::1::::<><>::
+Card Poison.PNG::CompressedTexture2D::6733932208675081934::1729115656::1729115774::1::::<><>::
+Card Psychic.PNG::CompressedTexture2D::4214374626163322067::1729115656::1729115774::1::::<><>::
+Card Water.PNG::CompressedTexture2D::6562310690513932727::1729115656::1729115774::1::::<><>::
+Card Weapon.PNG::CompressedTexture2D::1343696833849973999::1729115656::1729115773::1::::<><>::
+::res://Assets/Tileset/::1729115558
+LICENSE.md::TextFile::-1::1729115547::0::1::::<><>::
+README.md::TextFile::-1::1729115547::0::1::::<><>::
+::res://Assets/Tileset/Premium/::1729115774
+Animated_props.png::CompressedTexture2D::8878413869057573579::1729115547::1729115773::1::::<><>::
+Animated_worm.png::CompressedTexture2D::1641603071663882369::1729115547::1729115773::1::::<><>::
+Mockup runes.png::CompressedTexture2D::8207056971400657143::1729115547::1729115773::1::::<><>::
+Props.png::CompressedTexture2D::1171094653459947712::1729115547::1729115774::1::::<><>::
+Terrain_and_foreground.png::CompressedTexture2D::9069638437037743500::1729115547::1729115773::1::::<><>::
+Terrain_and_Props-Old.png::CompressedTexture2D::5409123346262565787::1729115547::1729115773::1::::<><>::
+::res://Assets/Tileset/Premium/BG_1/::1729115774
+BG_1.png::CompressedTexture2D::4011347711972159590::1729115547::1729115774::1::::<><>::
+BG_1_loop.png::CompressedTexture2D::2492858138433496251::1729115547::1729115774::1::::<><>::
+BG_1_loop_alt_2.png::CompressedTexture2D::4270519791650414497::1729115547::1729115774::1::::<><>::
+BG_1_loop_left_end.png::CompressedTexture2D::6359021460747653450::1729115547::1729115774::1::::<><>::
+BG_1_loop_right_end.png::CompressedTexture2D::4502118939578390836::1729115547::1729115774::1::::<><>::
+BG_1_loop_right_end_alt_2 .png::CompressedTexture2D::6694343612671402893::1729115547::1729115773::1::::<><>::
+::res://Assets/Tileset/Premium/BG_2/::1729115774
+BG_2.png::CompressedTexture2D::296235033247649971::1729115547::1729115773::1::::<><>::
+BG_2_alt_1.png::CompressedTexture2D::2825003391301715004::1729115547::1729115774::1::::<><>::
+BG_2_alt_2.png::CompressedTexture2D::1699338678590018576::1729115547::1729115773::1::::<><>::
+BG_2_alt_3.png::CompressedTexture2D::9122880540962317144::1729115547::1729115773::1::::<><>::
+BG_2_alt_4.png::CompressedTexture2D::5863092036442183647::1729115547::1729115773::1::::<><>::
+::res://Assets/Tileset/Premium/BG_3/::1729115773
+BG_3.png::CompressedTexture2D::9161458313798376506::1729115547::1729115773::1::::<><>::
+BG_3_alt.png::CompressedTexture2D::1182227877553283670::1729115547::1729115773::1::::<><>::
+::res://Assets/Tileset/Premium/BG_3/light_only/::1729115773
+BG_3.png::CompressedTexture2D::8959691117518439918::1729115547::1729115773::1::::<><>::
+BG_3_alt.png::CompressedTexture2D::6821191951736853879::1729115547::1729115773::1::::<><>::
+::res://Assets/Tileset/Premium/Bonus/::1729115773
+BG_asset.png::CompressedTexture2D::8778123181731095464::1729115547::1729115773::1::::<><>::
+::res://Assets/Tileset/Premium/Character basic animation/::1729115773
+idle mushroom.png::CompressedTexture2D::6207130741754455964::1729115547::1729115773::1::::<><>::
+jump float.png::CompressedTexture2D::306720086734059001::1729115547::1729115773::1::::<><>::
+Mushroom die.png::CompressedTexture2D::2281249332780104876::1729115547::1729115773::1::::<><>::
+Run Mushroom.png::CompressedTexture2D::3238373656459467350::1729115547::1729115773::1::::<><>::
+::res://Objects/::1729115250
+::res://Objects/Entities/::1729115269
+::res://Objects/Entities/Bosses/::1729115269
+::res://Objects/Entities/Enemies/::1729115263
+::res://Scenes/::1729115221
+::res://Scenes/Levels/::1729115215
+::res://Scenes/Menus/::1729115221
+::res://Scripts/::1729115245
+::res://Scripts/Autoloads/::1729115238
+::res://Scripts/Entities/::1729115233
+::res://Scripts/UI/::1729115245
