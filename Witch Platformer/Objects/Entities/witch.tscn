@@ -1,0 +1,32 @@
+[gd_scene load_steps=4 format=3 uid="uid://crkdxf6dvr8su"]
+
+[ext_resource type="Script" path="res://Scripts/Player/playerMovement.gd" id="1_jt7ct"]
+[ext_resource type="Texture2D" uid="uid://sa1eigkvvd41" path="res://Assets/Entities/Witch/W_witch_spritesheet.png" id="1_nq1y7"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_0e2b2"]
+radius = 6.195
+height = 28.1
+
+[node name="Witch" type="CharacterBody2D"]
+position = Vector2(292, 332)
+script = ExtResource("1_jt7ct")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1, 8)
+shape = SubResource("CapsuleShape2D_0e2b2")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_nq1y7")
+offset = Vector2(24, 0)
+hframes = 7
+vframes = 7
+
+[node name="Camera2D" type="Camera2D" parent="."]
+offset = Vector2(0, -16)
+zoom = Vector2(2, 2)
+limit_left = 0
+limit_top = 0
+limit_bottom = 416
+limit_smoothed = true
+position_smoothing_enabled = true
+position_smoothing_speed = 16.0

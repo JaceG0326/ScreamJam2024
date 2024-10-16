@@ -15,11 +15,12 @@ Projectile_sprite.png::CompressedTexture2D::5414533205890131520::1729115745::172
 ::res://Assets/Entities/Skeleton/::1729115773
 Attack3.png::CompressedTexture2D::2122534806678301643::1729115745::1729115773::1::::<><>::
 Sword_sprite.png::CompressedTexture2D::7435247882328573958::1729115745::1729115773::1::::<><>::
-::res://Assets/Entities/Witch/::1729115773
+::res://Assets/Entities/Witch/::1729116242
 W_witch_attack.png::CompressedTexture2D::8425160879984821810::1729049973::1729115773::1::::<><>::
 W_witch_charge.png::CompressedTexture2D::5813148527911151640::1729049973::1729115773::1::::<><>::
 W_witch_idle.png::CompressedTexture2D::491005329623344463::1729049973::1729115773::1::::<><>::
 W_witch_run.png::CompressedTexture2D::4433267628010150071::1729049973::1729115773::1::::<><>::
+W_witch_spritesheet.png::CompressedTexture2D::1264985400411005368::1729116242::1729116245::1::::<><>::
 W_witch_take_damage.png::CompressedTexture2D::2058893758856334053::1729049973::1729115773::1::::<><>::
 W_witch_take_death.png::CompressedTexture2D::4353321658036311963::1729049973::1729115773::1::::<><>::
 ::res://Assets/Spells/::1729115682
@@ -380,11 +381,13 @@ jump float.png::CompressedTexture2D::306720086734059001::1729115547::1729115773:
 Mushroom die.png::CompressedTexture2D::2281249332780104876::1729115547::1729115773::1::::<><>::
 Run Mushroom.png::CompressedTexture2D::3238373656459467350::1729115547::1729115773::1::::<><>::
 ::res://Objects/::1729115250
-::res://Objects/Entities/::1729115269
+::res://Objects/Entities/::1729116005
+witch.tscn::PackedScene::5986919021682226292::1729116005::0::1::::<><>::
 ::res://Objects/Entities/Bosses/::1729115269
 ::res://Objects/Entities/Enemies/::1729115263
 ::res://Scenes/::1729115221
-::res://Scenes/Levels/::1729115215
+::res://Scenes/Levels/::1729115977
+testLevel.tscn::PackedScene::6828546139809349771::1729115977::0::1::::<><>::
 ::res://Scenes/Menus/::1729115221
 ::res://Scripts/::1729115245
 ::res://Scripts/Autoloads/::1729115238

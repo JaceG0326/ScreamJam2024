@@ -1,0 +1,8 @@
+Camera2D
+CanvasLayer
+ParallaxLayer
+ParallaxBackground
+TileMap
+Sprite2D
+CollisionShape2D
+CharacterBody2D

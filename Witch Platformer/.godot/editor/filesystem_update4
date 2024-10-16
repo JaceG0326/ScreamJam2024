@@ -1,0 +1,3 @@
+res://Objects/Entities/witch.tscn
+res://Scripts/Player/playerMovement.gd
+res://Scenes/Levels/testLevel.tscn
