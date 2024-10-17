@@ -1,5 +1,5 @@
 2a60927148abd1d33b818b535e306557
-::res://::1729133005
+::res://::1729181627
 icon.svg::CompressedTexture2D::2765909328868210206::1729114890::1729114892::1::::<><>::
 ::res://Assets/::1729115669
 ::res://Assets/Entities/::1729115762
@@ -15,12 +15,12 @@ Projectile_sprite.png::CompressedTexture2D::5414533205890131520::1729115745::172
 ::res://Assets/Entities/Skeleton/::1729115773
 Attack3.png::CompressedTexture2D::2122534806678301643::1729115745::1729115773::1::::<><>::
 Sword_sprite.png::CompressedTexture2D::7435247882328573958::1729115745::1729115773::1::::<><>::
-::res://Assets/Entities/Witch/::1729116245
+::res://Assets/Entities/Witch/::1729200971
 W_witch_attack.png::CompressedTexture2D::8425160879984821810::1729049973::1729115773::1::::<><>::
 W_witch_charge.png::CompressedTexture2D::5813148527911151640::1729049973::1729115773::1::::<><>::
 W_witch_idle.png::CompressedTexture2D::491005329623344463::1729049973::1729115773::1::::<><>::
 W_witch_run.png::CompressedTexture2D::4433267628010150071::1729049973::1729115773::1::::<><>::
-W_witch_spritesheet.png::CompressedTexture2D::1264985400411005368::1729116242::1729116245::1::::<><>::
+W_witch_spritesheet.png::CompressedTexture2D::1264985400411005368::1729201086::1729201088::1::::<><>::
 W_witch_take_damage.png::CompressedTexture2D::2058893758856334053::1729049973::1729115773::1::::<><>::
 W_witch_take_death.png::CompressedTexture2D::4353321658036311963::1729049973::1729115773::1::::<><>::
 ::res://Assets/Spells/::1729115682
@@ -381,17 +381,17 @@ jump float.png::CompressedTexture2D::306720086734059001::1729115547::1729115773:
 Mushroom die.png::CompressedTexture2D::2281249332780104876::1729115547::1729115773::1::::<><>::
 Run Mushroom.png::CompressedTexture2D::3238373656459467350::1729115547::1729115773::1::::<><>::
 ::res://Objects/::1729115250
-::res://Objects/Entities/::1729119551
-witch.tscn::PackedScene::5986919021682226292::1729119551::0::1::::<><>::res://Scripts/Player/playerMovement.gd<>uid://sa1eigkvvd41::::res://Assets/Entities/Witch/W_witch_spritesheet.png
+::res://Objects/Entities/::1729200857
+witch.tscn::PackedScene::5986919021682226292::1729200857::0::1::::<><>::res://Scripts/Player/playerMovement.gd<>uid://sa1eigkvvd41::::res://Assets/Entities/Witch/W_witch_spritesheet.png
 ::res://Objects/Entities/Bosses/::1729115269
 ::res://Objects/Entities/Enemies/::1729115263
 ::res://Scenes/::1729115221
-::res://Scenes/Levels/::1729122968
-testLevel.tscn::PackedScene::6828546139809349771::1729122968::0::1::::<><>::uid://crkdxf6dvr8su::::res://Objects/Entities/witch.tscn<>uid://d2hnvcxgs8nfg::::res://Assets/Tileset/Premium/Terrain_and_foreground.png<>uid://bbrtak1wrb180::::res://Assets/Tileset/Premium/BG_1/BG_1_loop.png
+::res://Scenes/Levels/::1729200857
+testLevel.tscn::PackedScene::6828546139809349771::1729200857::0::1::::<><>::uid://crkdxf6dvr8su::::res://Objects/Entities/witch.tscn<>uid://d2hnvcxgs8nfg::::res://Assets/Tileset/Premium/Terrain_and_foreground.png<>uid://bbrtak1wrb180::::res://Assets/Tileset/Premium/BG_1/BG_1_loop.png<>uid://d3r446gqbry3k::::res://Assets/Tileset/Premium/BG_3/BG_3.png<>uid://bgipnmpb3oipo::::res://Assets/Tileset/Premium/BG_2/BG_2_alt_1.png
 ::res://Scenes/Menus/::1729115221
 ::res://Scripts/::1729116515
 ::res://Scripts/Autoloads/::1729115238
 ::res://Scripts/Entities/::1729115233
-::res://Scripts/Player/::1729119337
-playerMovement.gd::GDScript::-1::1729119337::0::1::::<>CharacterBody2D<>::
+::res://Scripts/Player/::1729200847
+playerMovement.gd::GDScript::-1::1729200847::0::1::::<>CharacterBody2D<>::
 ::res://Scripts/UI/::1729115245
