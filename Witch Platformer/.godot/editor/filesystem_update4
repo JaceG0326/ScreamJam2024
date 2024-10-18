@@ -1,3 +1,14 @@
 res://Objects/Entities/witch.tscn
 res://Scripts/Player/playerMovement.gd
 res://Scenes/Levels/testLevel.tscn
+res://Scripts/levelCamera.gd
+res://Scripts/Autoloads/Global.gd
+res://Objects/Entities/Enemies/skeleton.tscn
+res://Scripts/Components/HealthComponent.gd
+res://Scripts/Components/Attack.gd
+res://Scripts/Components/HitboxComponent.gd
+res://Scripts/Components/ShieldComponent.gd
+res://Objects/Spells/spell_projectile.tscn
+res://Scripts/Spells/spellProjectile.gd
+res://Scripts/Player/playerController.gd
+res://Components/hitbox_component.tscn
