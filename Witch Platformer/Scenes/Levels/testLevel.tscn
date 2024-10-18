@@ -1513,3 +1513,6 @@ centered = false
 
 [node name="Skeleton" parent="Enemies" groups=["Enemies"] instance=ExtResource("7_y2wfd")]
 position = Vector2(952, 320)
+
+[node name="Skeleton2" parent="Enemies" groups=["Enemies"] instance=ExtResource("7_y2wfd")]
+position = Vector2(800, 272)

@@ -12,3 +12,7 @@ res://Objects/Spells/spell_projectile.tscn
 res://Scripts/Spells/spellProjectile.gd
 res://Scripts/Player/playerController.gd
 res://Components/hitbox_component.tscn
+res://Scripts/Entities/skeleton.gd
+res://Scripts/States/state.gd
+res://Scripts/States/stateMachine.gd
+res://Scripts/States/enemyIdle.gd

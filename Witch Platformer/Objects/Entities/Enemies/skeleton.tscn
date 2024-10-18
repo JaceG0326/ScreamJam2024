@@ -1,11 +1,15 @@
-[gd_scene load_steps=16 format=3 uid="uid://dpo0c5axu1s4"]
+[gd_scene load_steps=19 format=3 uid="uid://dpo0c5axu1s4"]
 
+[ext_resource type="Script" path="res://Scripts/Entities/skeleton.gd" id="1_ox2ui"]
 [ext_resource type="Texture2D" uid="uid://djgyewhbr0kxh" path="res://Assets/Entities/Skeleton/skeleton_spritesheet.png" id="1_re4s6"]
 [ext_resource type="PackedScene" uid="uid://d2jrwi8rodxdv" path="res://Components/health_component.tscn" id="2_fort0"]
 [ext_resource type="PackedScene" uid="uid://dtu2ppkfauvtr" path="res://Components/hitbox_component.tscn" id="3_ia3fq"]
 [ext_resource type="Script" path="res://Scripts/Components/ShieldComponent.gd" id="4_804wh"]
+[ext_resource type="Script" path="res://Scripts/States/stateMachine.gd" id="6_83naq"]
+[ext_resource type="Script" path="res://Scripts/States/enemyIdle.gd" id="7_0hhi6"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_hnxls"]
+radius = 12.0
 height = 52.0
 
 [sub_resource type="Animation" id="Animation_0qu8j"]
@@ -25,6 +29,30 @@ tracks/0/keys = {
 "update": 1,
 "values": [12, 13, 14, 15]
 }
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ShieldComponent/Shield:disabled")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("HitboxComponent/Main:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(4, 0)]
+}
 
 [sub_resource type="Animation" id="Animation_desuv"]
 resource_name = "attack"
@@ -41,6 +69,30 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
 "update": 1,
 "values": [0, 1, 2, 3, 4, 5, 6, 7]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ShieldComponent/Shield:disabled")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("HitboxComponent/Main:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(4, 0)]
 }
 
 [sub_resource type="Animation" id="Animation_1sci8"]
@@ -69,6 +121,18 @@ tracks/1/keys = {
 "update": 0,
 "values": [Vector2(4, 0)]
 }
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("ShieldComponent/Shield:disabled")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
 
 [sub_resource type="Animation" id="Animation_tcv4w"]
 resource_name = "hurt"
@@ -85,6 +149,30 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 1,
 "values": [20, 21, 22, 23]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ShieldComponent/Shield:disabled")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("HitboxComponent/Main:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(4, 0)]
 }
 
 [sub_resource type="Animation" id="Animation_3fxk5"]
@@ -115,6 +203,18 @@ tracks/1/keys = {
 "update": 0,
 "values": [Vector2(12, 0)]
 }
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("ShieldComponent/Shield:disabled")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
 
 [sub_resource type="Animation" id="Animation_7byk6"]
 resource_name = "walk"
@@ -133,6 +233,30 @@ tracks/0/keys = {
 "update": 1,
 "values": [24, 25, 26, 27]
 }
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ShieldComponent/Shield:disabled")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("HitboxComponent/Main:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(4, 0)]
+}
 
 [sub_resource type="Animation" id="Animation_l4l25"]
 resource_name = "death"
@@ -149,6 +273,44 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 1,
 "values": [8, 9, 10, 11]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ShieldComponent/Shield:disabled")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("HitboxComponent/Main:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(4, 0)]
+}
+tracks/3/type = "method"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.5),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"die"
+}]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_c48y4"]
@@ -171,6 +333,7 @@ size = Vector2(10, 56)
 [node name="Skeleton" type="CharacterBody2D"]
 collision_layer = 2
 collision_mask = 4
+script = ExtResource("1_ox2ui")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(4, 0)
@@ -206,3 +369,37 @@ anim = NodePath("../AnimationPlayer")
 [node name="Shield" type="CollisionShape2D" parent="ShieldComponent"]
 position = Vector2(29, 0)
 shape = SubResource("RectangleShape2D_n3tn8")
+disabled = true
+
+[node name="StateMachine" type="Node" parent="." node_paths=PackedStringArray("initial_state")]
+script = ExtResource("6_83naq")
+initial_state = NodePath("EnemyIdle")
+
+[node name="EnemyIdle" type="Node" parent="StateMachine" node_paths=PackedStringArray("enemy", "right_ground_sensor", "right_wall_sensor", "left_ground_sensor", "left_wall_sensor")]
+script = ExtResource("7_0hhi6")
+enemy = NodePath("../..")
+move_speed = 20.0
+right_ground_sensor = NodePath("../../RightGroundRay")
+right_wall_sensor = NodePath("../../RightWallRay")
+left_ground_sensor = NodePath("../../LeftGroundRay")
+left_wall_sensor = NodePath("../../LeftWallRay")
+
+[node name="RightGroundRay" type="RayCast2D" parent="."]
+position = Vector2(24, 0)
+target_position = Vector2(0, 36)
+collision_mask = 4
+
+[node name="LeftGroundRay" type="RayCast2D" parent="."]
+position = Vector2(-16, 0)
+target_position = Vector2(0, 36)
+collision_mask = 4
+
+[node name="RightWallRay" type="RayCast2D" parent="."]
+position = Vector2(4, 20)
+target_position = Vector2(20, 0)
+collision_mask = 4
+
+[node name="LeftWallRay" type="RayCast2D" parent="."]
+position = Vector2(4, 20)
+target_position = Vector2(-20, 0)
+collision_mask = 4

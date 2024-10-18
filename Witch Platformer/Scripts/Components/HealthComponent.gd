@@ -11,4 +11,9 @@ func damage(attack: Attack):
 	health -= attack.attack_damage
 	
 	if health <= 0:
-		get_parent().queue_free()
+		var enemy = get_parent()
+		
+		if enemy is Skeleton:
+			enemy.anim.play("death")
+		else:
+			enemy.queue_free()
