@@ -1,4 +1,5 @@
 extends CharacterBody2D
+class_name Witch
 
 # Change to constants later
 const speed = 175
@@ -9,7 +10,7 @@ const friction = 0.05
 
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
-enum STATES { IDLE, RUNNING, JUMPING, FALLING, CHARGING, ATTACKING }
+enum STATES { IDLE, RUNNING, JUMPING, FALLING, CHARGING, ATTACKING, HURT, DEAD }
 
 @onready var anim = $AnimationPlayer
 @onready var sprite = $Sprite2D
@@ -19,35 +20,46 @@ var current_state = null
 var charge_time := 0.0
 var max_charge := 3.0
 var attacked_charged := false
-# Room swapping
+var is_dead := false
+var is_hit := false
+var applying_knockback = false
 
+# Room swapping
 enum Touching_Side { BOTH, HORIZONTAL, VERTICAL, NONE }
 
 func _ready():
-	pass
+	Global.platforming_player = self
 
 func _physics_process(delta):
 	if not is_on_floor():
 		velocity.y += gravity * delta
 	
-	if Input.is_action_just_pressed("jump") and is_on_floor():
-		velocity.y = jump_power
-		#velocity.x += speed * 0.5 * velocity.sign().x
-	
-	if Input.is_action_just_released("jump") and velocity.y < 0:
-		velocity.y *= decel_on_jump_release
-	
-	var inputDir = Input.get_axis("left", "right")
-	if inputDir:
-		velocity.x = move_toward(velocity.x, inputDir * speed, speed * accel)
-	else:
+	if current_state != STATES.DEAD and current_state != STATES.HURT:
+		if Input.is_action_just_pressed("jump") and is_on_floor():
+			velocity.y = jump_power
+			#velocity.x += speed * 0.5 * velocity.sign().x
+		
+		if Input.is_action_just_released("jump") and velocity.y < 0:
+			velocity.y *= decel_on_jump_release
+		
+		var inputDir = Input.get_axis("left", "right")
+		if inputDir:
+			velocity.x = move_toward(velocity.x, inputDir * speed, speed * accel)
+		else:
+			velocity.x = move_toward(velocity.x, 0, speed * friction)
+	elif velocity:
 		velocity.x = move_toward(velocity.x, 0, speed * friction)
-	
 	state_machine()
 	animation_handler()
 	move_and_slide()
 
 func state_machine():
+	if is_hit or applying_knockback:
+		current_state = STATES.HURT
+		return
+	if is_dead:
+		current_state = STATES.DEAD
+		return
 	if not is_on_floor():
 		if velocity.y > 0:
 			current_state = STATES.FALLING
@@ -84,9 +96,9 @@ func animation_handler():
 		STATES.RUNNING:
 			anim.play("run")
 			if velocity.x < 0:
-				sprite.flip_h = true
+				if !applying_knockback: sprite.flip_h = true
 			elif velocity.x > 0:
-				sprite.flip_h = false
+				if !applying_knockback: sprite.flip_h = false
 		STATES.JUMPING:
 			anim.play("jump")
 		STATES.FALLING:
@@ -95,9 +107,21 @@ func animation_handler():
 			anim.play("charge")
 		STATES.ATTACKING:
 			anim.play("attack")
+		STATES.HURT:
+			pass
+		STATES.DEAD:
+			anim.play("death")
 
 func attack():
 	attacked_charged = false
+
+func on_hit():
+	applying_knockback = false
+	is_hit = false
+
+func on_death():
+	print("Dead")
+	get_tree().reload_current_scene()
 
 func spawn_projectile():
 	var spell = spell_projectile.instantiate()
@@ -106,6 +130,8 @@ func spawn_projectile():
 	get_parent().add_child(spell)
  
 func _on_room_detector_area_entered(area):
+	if not Global.player_camera or not is_instance_valid(Global.player_camera):
+		return
 	# Gets collision shape and size of room
 	var collision_shape: CollisionShape2D = area.get_node("CollisionShape2D")
 	var size: Vector2 = collision_shape.shape.size * 2

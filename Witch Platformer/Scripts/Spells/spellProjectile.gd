@@ -8,7 +8,7 @@ var target = null
 var dir = Vector2.ZERO
 
 @export var damage := 20.0
-@export var knockback_force := 100.0
+@export var knockback_force := 200.0
 @export var stun_time := 1.5
 
 func _ready():

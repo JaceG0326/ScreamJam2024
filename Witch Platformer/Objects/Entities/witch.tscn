@@ -1,9 +1,11 @@
-[gd_scene load_steps=16 format=3 uid="uid://crkdxf6dvr8su"]
+[gd_scene load_steps=20 format=3 uid="uid://crkdxf6dvr8su"]
 
 [ext_resource type="Texture2D" uid="uid://sa1eigkvvd41" path="res://Assets/Entities/Witch/W_witch_spritesheet.png" id="1_nq1y7"]
 [ext_resource type="Script" path="res://Scripts/Player/playerController.gd" id="1_x72ns"]
 [ext_resource type="Texture2D" uid="uid://cr13e2px3v1pt" path="res://Assets/light.png" id="3_j5mdh"]
 [ext_resource type="Texture2D" uid="uid://k37g0x738vmp" path="res://Assets/Particles/small_circle.png" id="4_4d1hp"]
+[ext_resource type="PackedScene" uid="uid://d2jrwi8rodxdv" path="res://Components/health_component.tscn" id="5_f18kt"]
+[ext_resource type="PackedScene" uid="uid://dtu2ppkfauvtr" path="res://Components/hitbox_component.tscn" id="6_l0w78"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_0e2b2"]
 radius = 6.195
@@ -223,6 +225,20 @@ tracks/0/keys = {
 "update": 1,
 "values": [0, 33, 2]
 }
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.5),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"on_hit"
+}]
+}
 
 [sub_resource type="Animation" id="Animation_v21ls"]
 resource_name = "jump"
@@ -258,11 +274,43 @@ tracks/0/keys = {
 "values": [8, 46]
 }
 
+[sub_resource type="Animation" id="Animation_2qoo8"]
+resource_name = "death"
+length = 1.00001
+step = 0.0909091
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.0909091, 0.181818, 0.272727, 0.363636, 0.454545, 0.545455, 0.636364, 0.727273, 0.818182, 0.909091),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(1),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"on_death"
+}]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_gvukl"]
 _data = {
 "RESET": SubResource("Animation_8mwjt"),
 "attack": SubResource("Animation_dvyai"),
 "charge": SubResource("Animation_o8dc1"),
+"death": SubResource("Animation_2qoo8"),
 "hurt": SubResource("Animation_d28bo"),
 "idle": SubResource("Animation_sc1ws"),
 "jump": SubResource("Animation_v21ls"),
@@ -272,6 +320,9 @@ _data = {
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_o8tcq"]
 size = Vector2(1, 1)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_n7w5a"]
+size = Vector2(30, 41)
 
 [node name="Witch" type="CharacterBody2D"]
 position = Vector2(292, 332)
@@ -317,5 +368,16 @@ gravity = Vector2(0, -980)
 scale_amount_min = 0.1
 scale_amount_max = 0.3
 color = Color(0.309804, 0.643137, 0.647059, 1)
+
+[node name="HealthComponent" parent="." instance=ExtResource("5_f18kt")]
+MAX_HEALTH = 30.0
+
+[node name="HitboxComponent" parent="." node_paths=PackedStringArray("health_component") instance=ExtResource("6_l0w78")]
+collision_mask = 2
+health_component = NodePath("../HealthComponent")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HitboxComponent"]
+position = Vector2(1, 4.5)
+shape = SubResource("RectangleShape2D_n7w5a")
 
 [connection signal="area_entered" from="RoomDetector" to="." method="_on_room_detector_area_entered"]

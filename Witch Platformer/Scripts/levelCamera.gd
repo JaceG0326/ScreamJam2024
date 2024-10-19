@@ -15,6 +15,7 @@ var zoom_view_size: Vector2
 
 
 func _ready() -> void:
+	Global.player_camera = self
 	# Sets smoothing to 1 and back to follow_smoothing
 	# I do this so the camera appears as if it starts at the first room not at (0, 0)
 
@@ -37,6 +38,8 @@ func _physics_process(delta: float) -> void:
 	
 
 func calculate_target_position(room_center: Vector2, room_size: Vector2) -> Vector2:
+	if not Global.platforming_player or not is_instance_valid(Global.platforming_player):
+		return Vector2.ZERO
 	# The distance from the center of the room to the camera boundary on one side.
 	# When the room is the same size as the screen the x and y margin are zero
 	var x_margin: float = (room_size.x - zoom_view_size.x) / 2

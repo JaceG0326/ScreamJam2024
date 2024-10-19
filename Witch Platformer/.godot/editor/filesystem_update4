@@ -16,3 +16,8 @@ res://Scripts/Entities/skeleton.gd
 res://Scripts/States/state.gd
 res://Scripts/States/stateMachine.gd
 res://Scripts/States/enemyIdle.gd
+res://Scripts/States/enemyFollow.gd
+res://Scripts/States/enemyAttack.gd
+res://Scripts/States/enemyDeath.gd
+res://Scripts/States/enemyHit.gd
+res://Scripts/States/enemyHurt.gd

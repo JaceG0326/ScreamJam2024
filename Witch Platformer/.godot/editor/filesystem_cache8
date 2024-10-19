@@ -47,9 +47,8 @@ W_witch_take_damage.png::CompressedTexture2D::2058893758856334053::1729049973::1
 W_witch_take_death.png::CompressedTexture2D::4353321658036311963::1729049973::1729115773::1::::<><>::
 ::res://Assets/Particles/::1729220997
 small_circle.png::CompressedTexture2D::761646022132881667::1729220995::1729220997::1::::<><>::
-::res://Assets/Spells/::1729226307
-large_projectile-sheet.png::CompressedTexture2D::4700543775246488029::1729226304::1729226307::1::::<><>::
-large_projectile.png::CompressedTexture2D::1630558037229870989::1729226325::1729226327::1::::<><>::
+::res://Assets/Spells/::1729226347
+large_projectile.png::CompressedTexture2D::1630558037229870989::1729226396::1729226327::1::::<><>::
 main_attack.png::CompressedTexture2D::3286908439119168591::1729224366::1729224367::1::::<><>::
 ::res://Assets/Spells/Tabletop Spellbook - Asset Pack 1.0/::1729115683
 ::res://Assets/Spells/Tabletop Spellbook - Asset Pack 1.0/Anguish/::1729115774
@@ -407,33 +406,43 @@ idle mushroom.png::CompressedTexture2D::6207130741754455964::1729115547::1729115
 jump float.png::CompressedTexture2D::306720086734059001::1729115547::1729115773::1::::<><>::
 Mushroom die.png::CompressedTexture2D::2281249332780104876::1729115547::1729115773::1::::<><>::
 Run Mushroom.png::CompressedTexture2D::3238373656459467350::1729115547::1729115773::1::::<><>::
-::res://Components/::1729222951
+::res://Components/::1729293326
 health_component.tscn::PackedScene::9074012177392255535::1729222947::0::1::::<><>::res://Scripts/Components/HealthComponent.gd
-hitbox_component.tscn::PackedScene::8535804584522666411::1729222951::0::1::::<><>::res://Scripts/Components/HitboxComponent.gd
+hitbox_component.tscn::PackedScene::8535804584522666411::1729293326::0::1::::<><>::res://Scripts/Components/HitboxComponent.gd
 ::res://Objects/::1729224711
-::res://Objects/Entities/::1729225201
-witch.tscn::PackedScene::5986919021682226292::1729225201::0::1::::<><>::uid://sa1eigkvvd41::::res://Assets/Entities/Witch/W_witch_spritesheet.png<>res://Scripts/Player/playerController.gd<>uid://cr13e2px3v1pt::::res://Assets/light.png<>uid://k37g0x738vmp::::res://Assets/Particles/small_circle.png<>uid://dg5wdx5ugrjdy::::res://Objects/Spells/spell_projectile.tscn<>res://Scripts/Spells/spellProjectile.gd
+::res://Objects/Entities/::1729293326
+witch.tscn::PackedScene::5986919021682226292::1729293326::0::1::::<><>::uid://sa1eigkvvd41::::res://Assets/Entities/Witch/W_witch_spritesheet.png<>res://Scripts/Player/playerController.gd<>uid://cr13e2px3v1pt::::res://Assets/light.png<>uid://k37g0x738vmp::::res://Assets/Particles/small_circle.png<>uid://d2jrwi8rodxdv::::res://Components/health_component.tscn<>uid://dtu2ppkfauvtr::::res://Components/hitbox_component.tscn
 ::res://Objects/Entities/Bosses/::1729115269
-::res://Objects/Entities/Enemies/::1729223743
-skeleton.tscn::PackedScene::242427031393731961::1729223743::0::1::::<><>::uid://djgyewhbr0kxh::::res://Assets/Entities/Skeleton/skeleton_spritesheet.png<>uid://d2jrwi8rodxdv::::res://Components/health_component.tscn<>uid://dtu2ppkfauvtr::::res://Components/hitbox_component.tscn<>res://Scripts/Components/ShieldComponent.gd
-::res://Objects/Spells/::1729224856
-spell_projectile.tscn::PackedScene::7643668832050458634::1729224856::0::1::::<><>::uid://bm3g5wpelbifn::::res://Assets/Spells/main_attack.png
+::res://Objects/Entities/Enemies/::1729293326
+skeleton.tscn::PackedScene::242427031393731961::1729293326::0::1::::<><>::res://Scripts/Entities/skeleton.gd<>uid://djgyewhbr0kxh::::res://Assets/Entities/Skeleton/skeleton_spritesheet.png<>uid://d2jrwi8rodxdv::::res://Components/health_component.tscn<>uid://dtu2ppkfauvtr::::res://Components/hitbox_component.tscn<>res://Scripts/Components/ShieldComponent.gd<>res://Scripts/States/stateMachine.gd<>res://Scripts/States/enemyIdle.gd<>res://Scripts/States/enemyFollow.gd<>res://Scripts/States/enemyAttack.gd<>res://Scripts/States/enemyDeath.gd
+::res://Objects/Spells/::1729293326
+spell_projectile.tscn::PackedScene::7643668832050458634::1729293326::0::1::::<><>::res://Scripts/Spells/spellProjectile.gd<>uid://xh4b14gkejbh::::res://Assets/Spells/large_projectile.png
 ::res://Scenes/::1729115221
-::res://Scenes/Levels/::1729222357
-testLevel.tscn::PackedScene::6828546139809349771::1729222357::0::1::::<><>::uid://crkdxf6dvr8su::::res://Objects/Entities/witch.tscn<>uid://d2hnvcxgs8nfg::::res://Assets/Tileset/Premium/Terrain_and_foreground.png<>uid://bbrtak1wrb180::::res://Assets/Tileset/Premium/BG_1/BG_1_loop.png<>uid://d3r446gqbry3k::::res://Assets/Tileset/Premium/BG_3/BG_3.png<>uid://bgipnmpb3oipo::::res://Assets/Tileset/Premium/BG_2/BG_2_alt_1.png<>res://Scripts/levelCamera.gd<>uid://dpo0c5axu1s4::::res://Objects/Entities/Enemies/skeleton.tscn
+::res://Scenes/Levels/::1729293348
+testLevel.tscn::PackedScene::6828546139809349771::1729293799::0::1::::<><>::uid://crkdxf6dvr8su::::res://Objects/Entities/witch.tscn<>uid://d2hnvcxgs8nfg::::res://Assets/Tileset/Premium/Terrain_and_foreground.png<>uid://bbrtak1wrb180::::res://Assets/Tileset/Premium/BG_1/BG_1_loop.png<>uid://d3r446gqbry3k::::res://Assets/Tileset/Premium/BG_3/BG_3.png<>uid://bgipnmpb3oipo::::res://Assets/Tileset/Premium/BG_2/BG_2_alt_1.png<>res://Scripts/levelCamera.gd<>uid://dpo0c5axu1s4::::res://Objects/Entities/Enemies/skeleton.tscn
 ::res://Scenes/Menus/::1729115221
-::res://Scripts/::1729224755
-levelCamera.gd::GDScript::-1::1729205615::0::1::::<>Camera2D<>::
-::res://Scripts/Autoloads/::1729205208
-Global.gd::GDScript::-1::1729205208::0::1::::<>Node<>::
-::res://Scripts/Components/::1729223743
-Attack.gd::GDScript::-1::1729222753::0::1::::Attack<>RefCounted<>::
-HealthComponent.gd::GDScript::-1::1729222873::0::1::::HealthComponent<>Node2D<>::
+::res://Scripts/::1729264498
+levelCamera.gd::GDScript::-1::1729228829::0::1::::<>Camera2D<>::
+::res://Scripts/Autoloads/::1729228873
+Global.gd::GDScript::-1::1729228873::0::1::::<>Node<>::
+::res://Scripts/Components/::1729293348
+Attack.gd::GDScript::-1::1729229048::0::1::::Attack<>RefCounted<>::
+HealthComponent.gd::GDScript::-1::1729293348::0::1::::HealthComponent<>Node2D<>::
 HitboxComponent.gd::GDScript::-1::1729222885::0::1::::HitboxComponent<>Area2D<>::
 ShieldComponent.gd::GDScript::-1::1729223743::0::1::::ShieldComponent<>Area2D<>::
-::res://Scripts/Entities/::1729222520
-::res://Scripts/Player/::1729225201
-playerController.gd::GDScript::-1::1729225201::0::1::::<>CharacterBody2D<>::
-::res://Scripts/Spells/::1729224856
-spellProjectile.gd::GDScript::-1::1729224856::0::1::::<>Area2D<>::
+::res://Scripts/Entities/::1729292526
+skeleton.gd::GDScript::-1::1729292526::0::1::::Skeleton<>CharacterBody2D<>::
+::res://Scripts/Player/::1729277058
+playerController.gd::GDScript::-1::1729277058::0::1::::Witch<>CharacterBody2D<>::
+::res://Scripts/Spells/::1729229105
+spellProjectile.gd::GDScript::-1::1729229105::0::1::::<>RigidBody2D<>::
+::res://Scripts/States/::1729293787
+enemyIdle.gd::GDScript::-1::1729276495::0::1::::EnemyIdle<>State<>::
+enemyFollow.gd::GDScript::-1::1729292200::0::1::::EnemyFollow<>State<>::
+enemyAttack.gd::GDScript::-1::1729292899::0::1::::EnemyAttack<>State<>::
+enemyDeath.gd::GDScript::-1::1729293044::0::1::::EnemyDeath<>State<>::
+enemyBlock.gd::GDScript::-1::1729275210::0::1::::<>State<>::
+enemyHit.gd::GDScript::-1::1729293799::0::1::::EnemyHurt<>State<>::
+stateMachine.gd::GDScript::-1::1729274535::0::1::::<>Node<>::
+state.gd::GDScript::-1::1729264699::0::1::::State<>Node<>::
 ::res://Scripts/UI/::1729115245
