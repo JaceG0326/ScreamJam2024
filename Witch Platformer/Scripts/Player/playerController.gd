@@ -73,6 +73,9 @@ func _physics_process(delta):
 	move_and_slide()
 
 func state_machine():
+	if finished_level:
+		current_state = STATES.IDLE
+		return
 	if is_hit or applying_knockback:
 		current_state = STATES.HURT
 		attacked_charged = false

@@ -30,6 +30,7 @@ general/balloon_path="res://Scenes/UI/balloon.tscn"
 window/size/viewport_width=600
 window/size/viewport_height=400
 window/stretch/mode="viewport"
+window/stretch/aspect="keep_height"
 
 [editor_plugins]
 
