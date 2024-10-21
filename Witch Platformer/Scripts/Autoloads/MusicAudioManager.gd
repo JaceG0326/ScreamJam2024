@@ -4,7 +4,7 @@ signal levelStart
 signal levelFinished
 
 @onready var levelMusic = preload("res://Assets/Sounds/levelMusic.ogg")
-@onready var levelCompletedMusic = preload("res://Assets/Sounds/gem.wav")
+@onready var levelCompletedMusic = preload("res://Assets/Sounds/marimba-win-b-3-209679.wav")
 
 var base_volume = 0.0
 
@@ -17,7 +17,7 @@ func _ready():
 	levelFinished.connect(play_sound.bind(levelCompletedMusic))
 	base_volume = volume
 
-func play_sound(music: AudioStreamOggVorbis, pitch = 1.0):
+func play_sound(music, pitch = 1.0):
 	stream = music
 	play()
 

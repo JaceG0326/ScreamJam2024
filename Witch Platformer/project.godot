@@ -21,6 +21,7 @@ DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"
 States="*res://Scripts/Autoloads/State.gd"
 SfxAudio="*res://Scripts/Autoloads/SfxAudioManager.gd"
 MusicAudio="*res://Scripts/Autoloads/MusicAudioManager.gd"
+Stats="*res://Scripts/Autoloads/PlayerStats.gd"
 
 [dialogue_manager]
 

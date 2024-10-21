@@ -4,6 +4,8 @@ extends Node
 var player_camera : Camera2D = null
 var platforming_player : Witch = null
 
+var level_finished = false
+
 @export var room_pause: bool = false
 @export var room_pause_time: float = 0.2
 

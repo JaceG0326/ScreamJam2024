@@ -58,6 +58,7 @@ func attack():
 	anim.play("attack")
 
 func die():
+	Stats.score += 20
 	queue_free()
 
 func _on_sword_hitbox_area_entered(area):
@@ -72,6 +73,7 @@ func _on_sword_hitbox_area_entered(area):
 		
 		#print("Hit")
 		player_hitbox.damage(attack)
+		Stats.score -= 5
 
 func _on_shield_component_area_entered(area):
 	shield_hit = true

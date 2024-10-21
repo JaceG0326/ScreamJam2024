@@ -21,6 +21,8 @@ var will_hide_balloon: bool = false
 
 var _locale: String = TranslationServer.get_locale()
 
+var ui : CanvasLayer = null
+
 ## The current line
 var dialogue_line: DialogueLine:
 	set(next_dialogue_line):
@@ -30,6 +32,7 @@ var dialogue_line: DialogueLine:
 
 		# The dialogue has finished so close the balloon
 		if not next_dialogue_line:
+			ui.show()
 			get_tree().paused = false
 			queue_free()
 			return
@@ -112,6 +115,9 @@ func _notification(what: int) -> void:
 
 ## Start some dialogue
 func start(dialogue_resource: DialogueResource, title: String, extra_game_states: Array = []) -> void:
+	ui = get_tree().current_scene.get_node_or_null("UI")
+	if ui:
+		ui.hide()
 	get_tree().paused = true
 	temporary_game_states =  [self] + extra_game_states
 	is_waiting_for_input = false

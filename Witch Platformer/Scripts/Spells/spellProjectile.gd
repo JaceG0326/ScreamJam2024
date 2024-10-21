@@ -46,4 +46,5 @@ func _on_area_2d_area_entered(area):
 		attack.stun_time = stun_time
 		
 		hitbox.damage(attack)
+		Stats.score += 10
 	destroy()

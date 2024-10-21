@@ -23,7 +23,6 @@ var attacked_charged := false
 var is_dead := false
 var is_hit := false
 var applying_knockback := false
-var finished_level := false
 var goal = null
 var tween_pos : Tween = null
 
@@ -39,7 +38,7 @@ func _physics_process(delta):
 	if not is_on_floor():
 		velocity.y += gravity * delta
 	
-	if !finished_level:
+	if !Global.level_finished:
 		set_collision_mask_value(8, true)
 		
 		if Input.is_action_pressed("down"):
@@ -73,7 +72,7 @@ func _physics_process(delta):
 	move_and_slide()
 
 func state_machine():
-	if finished_level:
+	if Global.level_finished:
 		current_state = STATES.IDLE
 		return
 	if is_hit or applying_knockback:
@@ -147,6 +146,7 @@ func on_hit():
 
 func on_death():
 	print("Dead")
+	Stats.score -= 50
 	get_tree().reload_current_scene()
 
 func spawn_projectile():
@@ -222,4 +222,4 @@ func check_room_edge(a_center: Vector2, a_size: Vector2, b_center: Vector2, b_si
 
 func _on_goal_detector_area_entered(area):
 	goal = area
-	finished_level = true
+	Global.level_finished = true
