@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_12"
+type="Resource"
+uid="uid://clqo2bh6i6veh"
+path="res://.godot/imported/first_enemy_encounter.dialogue-b842d995d1cd69294389e997dd94fc49.tres"
+
+[deps]
+
+source_file="res://Dialogue/Level1/first_enemy_encounter.dialogue"
+dest_files=["res://.godot/imported/first_enemy_encounter.dialogue-b842d995d1cd69294389e997dd94fc49.tres"]
+
+[params]
+
+defaults=true

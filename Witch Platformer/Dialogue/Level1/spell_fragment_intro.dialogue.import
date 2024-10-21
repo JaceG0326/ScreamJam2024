@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_12"
+type="Resource"
+uid="uid://qrputt6no0qv"
+path="res://.godot/imported/spell_fragment_intro.dialogue-db0edd46cab8200cf8001503271852e0.tres"
+
+[deps]
+
+source_file="res://Dialogue/Level1/spell_fragment_intro.dialogue"
+dest_files=["res://.godot/imported/spell_fragment_intro.dialogue-db0edd46cab8200cf8001503271852e0.tres"]
+
+[params]
+
+defaults=true

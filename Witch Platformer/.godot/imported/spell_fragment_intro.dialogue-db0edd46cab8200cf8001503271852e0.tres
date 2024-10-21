@@ -1,0 +1,57 @@
+[gd_resource type="Resource" script_class="DialogueResource" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_oeywc"]
+
+[resource]
+script = ExtResource("1_oeywc")
+using_states = PackedStringArray()
+titles = {
+"what_are_spell_fragments": "3"
+}
+character_names = PackedStringArray()
+first_title = "3"
+lines = {
+"1": {
+"id": "1",
+"next_id": "3",
+"text": "what_are_spell_fragments",
+"type": &"title"
+},
+"3": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "3",
+"next_id": "4",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "Hey! Is that a spell fragment?",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Hey! Is that a spell fragment?",
+"type": &"dialogue"
+},
+"4": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "4",
+"next_id": "6",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "I'm gonna need those to make more spells!",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "I'm gonna need those to make more spells!",
+"type": &"dialogue"
+},
+"6": {
+"id": "6",
+"is_snippet": false,
+"next_id": "end",
+"type": &"goto"
+}
+}
+raw_text = "~ what_are_spell_fragments
+
+Hey! Is that a spell fragment?
+I'm gonna need those to make more spells!
+
+=> END"
+metadata/dialogue_manager_version = "2.42.2"

@@ -1,0 +1,70 @@
+[gd_resource type="Resource" script_class="DialogueResource" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_uxuu5"]
+
+[resource]
+script = ExtResource("1_uxuu5")
+using_states = PackedStringArray()
+titles = {
+"first_enemy_encounter": "3"
+}
+character_names = PackedStringArray()
+first_title = "3"
+lines = {
+"1": {
+"id": "1",
+"next_id": "3",
+"text": "first_enemy_encounter",
+"type": &"title"
+},
+"3": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "3",
+"next_id": "4",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "Uh oh. There's trouble up ahead.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Uh oh. There's trouble up ahead.",
+"type": &"dialogue"
+},
+"4": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "4",
+"next_id": "5",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "If I get too close, they might attack.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "If I get too close, they might attack.",
+"type": &"dialogue"
+},
+"5": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "5",
+"next_id": "7",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "Best to keep my distance or prepare for a fight.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Best to keep my distance or prepare for a fight.",
+"type": &"dialogue"
+},
+"7": {
+"id": "7",
+"is_snippet": false,
+"next_id": "end",
+"type": &"goto"
+}
+}
+raw_text = "~ first_enemy_encounter
+
+Uh oh. There's trouble up ahead.
+If I get too close, they might attack.
+Best to keep my distance or prepare for a fight.
+
+=> END"
+metadata/dialogue_manager_version = "2.42.2"

@@ -9,6 +9,7 @@ func _ready():
 
 func damage(attack: Attack):
 	health -= attack.attack_damage
+	print(health)
 	
 	var entity = get_parent()
 	if entity is Skeleton:

@@ -11,7 +11,7 @@ var wander_time : float
 @export var left_ground_sensor : RayCast2D
 @export var left_wall_sensor : RayCast2D
 
-var player : CharacterBody2D
+var player : Witch
 
 func randomize_wander():
 	move_direction = Vector2(randf_range(-1, 1), 0).normalized()

@@ -4,6 +4,9 @@ class_name Skeleton
 @onready var anim = $AnimationPlayer
 @onready var sprite = $Sprite2D
 @onready var sword = $SwordHitbox
+@onready var hitbox = $HitboxComponent
+@onready var shield = $ShieldComponent
+@onready var collision = $CollisionShape2D
 
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
@@ -11,15 +14,26 @@ var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 @export var knockback_force := 200.0
 @export var stun_time := 1.5
 @export var attacK_cooldown := 3.0
+@export var block_cooldown := 3.0
+@export var block_chance := 3
 
 var is_dead = false
 var is_hit = false
+var shield_hit = false
 var applying_knockback = false
 var on_cooldown = false
 var attack_timer := 0.0
+var block_timer := 0.0
+var on_block_cooldown = false
 
 func _physics_process(delta):
-	if not is_on_floor():
+	if on_block_cooldown and !is_hit:
+		if block_timer > block_cooldown:
+			block_timer = 0.0
+			on_block_cooldown = false
+		block_timer += delta
+	
+	if !is_on_floor() and !is_dead:
 		velocity.y += gravity * delta
 	
 	move_and_slide()
@@ -30,9 +44,15 @@ func _physics_process(delta):
 		if velocity.x > 0:
 			sprite.flip_h = false
 			sword.scale.x = 1
+			shield.scale.x = 1
+			hitbox.scale.x = 1
+			collision.position = Vector2(4, 0)
 		elif velocity.x < 0:
 			sprite.flip_h = true
 			sword.scale.x = -1
+			shield.scale.x = -1
+			hitbox.scale.x = -1
+			collision.position = Vector2(-4, 0)
 
 func attack():
 	anim.play("attack")
@@ -52,3 +72,6 @@ func _on_sword_hitbox_area_entered(area):
 		
 		#print("Hit")
 		player_hitbox.damage(attack)
+
+func _on_shield_component_area_entered(area):
+	shield_hit = true

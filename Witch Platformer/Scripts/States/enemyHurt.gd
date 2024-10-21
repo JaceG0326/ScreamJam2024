@@ -12,7 +12,9 @@ func Physics_Update(delta: float):
 		if !enemy.anim.is_playing():
 			if enemy.is_dead:
 				Transitioned.emit(self, "enemydeath")
-			if enemy.is_hit:
+				return
+			elif enemy.is_hit:
 				enemy.is_hit = false
 				enemy.applying_knockback = false
 				Transitioned.emit(self, "enemyidle")
+				return

@@ -22,33 +22,52 @@ var max_charge := 3.0
 var attacked_charged := false
 var is_dead := false
 var is_hit := false
-var applying_knockback = false
+var applying_knockback := false
+var finished_level := false
+var goal = null
+var tween_pos : Tween = null
 
 # Room swapping
 enum Touching_Side { BOTH, HORIZONTAL, VERTICAL, NONE }
 
 func _ready():
+	set_collision_mask_value(8, true)
+	
 	Global.platforming_player = self
 
 func _physics_process(delta):
 	if not is_on_floor():
 		velocity.y += gravity * delta
 	
-	if current_state != STATES.DEAD and current_state != STATES.HURT:
-		if Input.is_action_just_pressed("jump") and is_on_floor():
-			velocity.y = jump_power
-			#velocity.x += speed * 0.5 * velocity.sign().x
+	if !finished_level:
+		set_collision_mask_value(8, true)
 		
-		if Input.is_action_just_released("jump") and velocity.y < 0:
-			velocity.y *= decel_on_jump_release
+		if Input.is_action_pressed("down"):
+			set_collision_mask_value(8, false)
 		
-		var inputDir = Input.get_axis("left", "right")
-		if inputDir:
-			velocity.x = move_toward(velocity.x, inputDir * speed, speed * accel)
-		else:
+		if current_state != STATES.DEAD and current_state != STATES.HURT:
+			if Input.is_action_just_pressed("jump") and is_on_floor():
+				velocity.y = jump_power
+				if Input.is_action_pressed("down"):
+					set_collision_mask_value(8, false)
+				#velocity.x += speed * 0.5 * velocity.sign().x
+			
+			if Input.is_action_just_released("jump") and velocity.y < 0:
+				velocity.y *= decel_on_jump_release
+			
+			var inputDir = Input.get_axis("left", "right")
+			if inputDir:
+				velocity.x = move_toward(velocity.x, inputDir * speed, speed * accel)
+			else:
+				velocity.x = move_toward(velocity.x, 0, speed * friction)
+		elif velocity:
 			velocity.x = move_toward(velocity.x, 0, speed * friction)
-	elif velocity:
-		velocity.x = move_toward(velocity.x, 0, speed * friction)
+	elif velocity and tween_pos == null:
+		tween_pos = get_tree().create_tween()
+		tween_pos.tween_property(self, "position:x", goal.get_child(0).position.x, 1)
+	elif !tween_pos.is_running():
+		velocity = Vector2.ZERO
+	
 	state_machine()
 	animation_handler()
 	move_and_slide()
@@ -56,6 +75,8 @@ func _physics_process(delta):
 func state_machine():
 	if is_hit or applying_knockback:
 		current_state = STATES.HURT
+		attacked_charged = false
+		charge_time = 0.0
 		return
 	if is_dead:
 		current_state = STATES.DEAD
@@ -193,3 +214,7 @@ func check_room_edge(a_center: Vector2, a_size: Vector2, b_center: Vector2, b_si
 				
 	# Fail safe
 	return Global.RIGHT
+
+func _on_goal_detector_area_entered(area):
+	goal = area
+	finished_level = true

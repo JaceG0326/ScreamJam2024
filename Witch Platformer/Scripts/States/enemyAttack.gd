@@ -14,7 +14,7 @@ func Enter():
 func Update(delta: float):
 	if enemy:
 		if enemy.is_hit:
-			enemy.velocity = Vector2.ZERO
+			enemy.velocity.x = 0
 			Transitioned.emit(self, "enemyhurt")
 
 func Physics_Update(delta: float):
@@ -24,7 +24,7 @@ func Physics_Update(delta: float):
 		Transitioned.emit(self, "enemyidle")
 	
 	if dir.length() < 64:
-		enemy.velocity = Vector2.ZERO
+		enemy.velocity.x = 0
 		if enemy is Skeleton:
 			if !on_cooldown:
 				enemy.attack()

@@ -1,10 +1,13 @@
+res://Scripts
+res://Assets/Fonts
+res://Assets/Entities/Witch
+res://Scripts/Autoloads
+res://Scenes/UI
+res://Scripts/Spells
+res://Scripts/Components
 res://Scripts/States
 res://Scripts/Entities
-res://Scripts/Spells
 res://Assets/Spells
 res://Objects/Spells
-res://Scripts/Components
 res://Components
-res://Scripts
-res://Scripts/Autoloads
 res://Scripts/Player

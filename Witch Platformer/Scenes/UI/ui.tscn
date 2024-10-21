@@ -1,0 +1,93 @@
+[gd_scene load_steps=10 format=3 uid="uid://4f7voutj2wlp"]
+
+[ext_resource type="Texture2D" uid="uid://cdboeco4a8yxl" path="res://Assets/Entities/Witch/W_witch_headshot.png" id="1_m5lem"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_bjlwm"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qwaea"]
+atlas = ExtResource("1_m5lem")
+region = Rect2(0, 0, 50, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qfjlh"]
+atlas = ExtResource("1_m5lem")
+region = Rect2(50, 0, 50, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rg7u7"]
+atlas = ExtResource("1_m5lem")
+region = Rect2(100, 0, 50, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_63w8j"]
+atlas = ExtResource("1_m5lem")
+region = Rect2(150, 0, 50, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nk1so"]
+atlas = ExtResource("1_m5lem")
+region = Rect2(200, 0, 50, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_msfg6"]
+atlas = ExtResource("1_m5lem")
+region = Rect2(250, 0, 50, 50)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_1etal"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qwaea")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qfjlh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rg7u7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_63w8j")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nk1so")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_msfg6")
+}],
+"loop": true,
+"name": &"default",
+"speed": 6.0
+}]
+
+[node name="UI" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -40.0
+offset_bottom = 40.0
+grow_horizontal = 0
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 16
+
+[node name="HSplitContainer" type="HSplitContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/HSplitContainer"]
+layout_mode = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="MarginContainer/HSplitContainer"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_bjlwm")
+
+[node name="Headshot" type="AnimatedSprite2D" parent="MarginContainer/HSplitContainer/PanelContainer"]
+sprite_frames = SubResource("SpriteFrames_1etal")
+frame = 2
+frame_progress = 0.617756
+centered = false

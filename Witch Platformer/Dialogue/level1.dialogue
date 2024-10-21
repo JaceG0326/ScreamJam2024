@@ -1,0 +1,18 @@
+~ what_are_spell_fragments
+
+Hey![wait=1] Is that a spell fragment?
+I'm gonna need those to make more spells!
+
+=> END
+~ first_enemy_encounter
+
+Uh oh. There's trouble up ahead.
+If I get too close, they might attack.
+if !left_clicked:
+	Best to keep my distance, and prepare a spell (Hold Left-Click).
+else:
+	I'll only need a moment to prepare my spell.
+	This guy seems weak enough. One spell should be enough!
+set seen_first_enemy = true
+
+=> END

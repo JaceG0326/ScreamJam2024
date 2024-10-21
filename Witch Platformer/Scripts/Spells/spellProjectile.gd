@@ -26,10 +26,16 @@ func _on_animation_player_animation_finished(anim_name):
 	if anim_name == "fire":
 		anim.play("fly")
 
-func _on_area_2d_body_entered(body):
+func destroy():
 	queue_free()
 
+func _on_area_2d_body_entered(body):
+	if body.is_in_group("Enemies"):
+		return
+	destroy()
+
 func _on_area_2d_area_entered(area):
+	#print(area.name)
 	if area is HitboxComponent:
 		var hitbox : HitboxComponent = area
 		
@@ -40,3 +46,4 @@ func _on_area_2d_area_entered(area):
 		attack.stun_time = stun_time
 		
 		hitbox.damage(attack)
+	destroy()

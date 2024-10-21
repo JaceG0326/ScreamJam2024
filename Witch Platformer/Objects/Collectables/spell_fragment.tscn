@@ -1,0 +1,74 @@
+[gd_scene load_steps=8 format=3 uid="uid://dx35te8oxw60"]
+
+[ext_resource type="Script" path="res://Scripts/Spells/spellFragment.gd" id="1_ekup5"]
+[ext_resource type="Texture2D" uid="uid://cyxxoyam14vnd" path="res://Assets/Spells/spell_fragments.png" id="1_w1rlb"]
+[ext_resource type="Texture2D" uid="uid://cr13e2px3v1pt" path="res://Assets/light.png" id="3_0eky7"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_7oru1"]
+radius = 6.0
+height = 32.0
+
+[sub_resource type="Animation" id="Animation_gdj12"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_bnnfa"]
+resource_name = "idle"
+length = 2.0
+loop_mode = 1
+step = 0.0833333
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.583333, 1, 1.41667),
+"transitions": PackedFloat32Array(1, 1.5, 0.5, 1.5),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, 8), Vector2(0, 0), Vector2(0, -8)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_wucy1"]
+_data = {
+"RESET": SubResource("Animation_gdj12"),
+"idle": SubResource("Animation_bnnfa")
+}
+
+[node name="SpellFragment" type="Area2D"]
+collision_layer = 8
+script = ExtResource("1_ekup5")
+color = Color(0.0901961, 0.345098, 0.623529, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_7oru1")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_w1rlb")
+hframes = 4
+
+[node name="PointLight2D" type="PointLight2D" parent="Sprite2D"]
+visible = false
+position = Vector2(0, 5.08052)
+texture = ExtResource("3_0eky7")
+texture_scale = 0.25
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_wucy1")
+}
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

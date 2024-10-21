@@ -17,12 +17,23 @@ config/icon="res://icon.svg"
 [autoload]
 
 Global="*res://Scripts/Autoloads/Global.gd"
+DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"
+States="*res://Scripts/Autoloads/State.gd"
+
+[dialogue_manager]
+
+general/states=["States"]
+general/balloon_path="res://Scenes/UI/balloon.tscn"
 
 [display]
 
 window/size/viewport_width=600
 window/size/viewport_height=400
 window/stretch/mode="viewport"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/dialogue_manager/plugin.cfg")
 
 [input]
 
@@ -54,6 +65,16 @@ teleport={
 "events": [Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"button_mask":2,"position":Vector2(239, 19),"global_position":Vector2(243, 60),"factor":1.0,"button_index":2,"canceled":false,"pressed":true,"double_click":false,"script":null)
 ]
 }
+down={
+"deadzone": 0.5,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":83,"key_label":0,"unicode":115,"echo":false,"script":null)
+, Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":4194322,"key_label":0,"unicode":0,"echo":false,"script":null)
+]
+}
+
+[internationalization]
+
+locale/translations_pot_files=PackedStringArray("res://Dialogue/Level1/spell_fragment_intro.dialogue", "res://Dialogue/Level1/first_enemy_encounter.dialogue", "res://Dialogue/level1.dialogue")
 
 [layer_names]
 
@@ -64,6 +85,11 @@ teleport={
 2d_physics/layer_5="rooms"
 2d_physics/layer_6="spells"
 2d_physics/layer_7="shields"
+2d_physics/layer_8="platforms"
+2d_physics/layer_9="pickup"
+2d_physics/layer_10="dialogue_triggers"
+2d_physics/layer_11="hazards"
+2d_physics/layer_12="goals"
 
 [rendering]
 
