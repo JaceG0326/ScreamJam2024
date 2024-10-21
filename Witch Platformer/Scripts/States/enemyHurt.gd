@@ -6,6 +6,7 @@ class_name EnemyHurt
 func Enter():
 	enemy.velocity = Vector2.ZERO
 	enemy.anim.play("hurt")
+	SfxAudio.skeletonHurt.emit()
 
 func Physics_Update(delta: float):
 	if enemy.is_in_group("Enemies"):

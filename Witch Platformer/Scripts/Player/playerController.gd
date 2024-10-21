@@ -94,6 +94,7 @@ func state_machine():
 			current_state = STATES.RUNNING
 		else:
 			if Input.is_action_pressed("attack"):
+				if charge_time == 0.0: SfxAudio.chargingSpell.emit()
 				current_state = STATES.CHARGING
 				charge_time += 0.1
 				if charge_time >= max_charge:
@@ -106,6 +107,7 @@ func state_machine():
 				if charge_time >= max_charge or attacked_charged:
 					current_state = STATES.ATTACKING
 					charge_time = 0
+					SfxAudio.finishedCharging.emit()
 				else:
 					attacked_charged = false
 					charge_time = 0

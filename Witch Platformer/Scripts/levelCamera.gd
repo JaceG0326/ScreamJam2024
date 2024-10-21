@@ -23,6 +23,7 @@ func _ready() -> void:
 	smoothing = 1
 	await get_tree().create_timer(0.1).timeout
 	smoothing = follow_smoothing
+	MusicAudio.levelStart.emit()
 
 
 func _physics_process(delta: float) -> void:

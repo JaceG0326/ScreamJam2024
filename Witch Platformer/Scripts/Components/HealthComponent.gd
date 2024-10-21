@@ -26,6 +26,8 @@ func damage(attack: Attack):
 		apply_knockback(entity, attack)
 
 func apply_knockback(entity: CharacterBody2D, attack: Attack):
-	if entity is Witch: entity.anim.play("hurt")
+	if entity is Witch:
+		entity.anim.play("hurt")
+		SfxAudio.playerHurt.emit()
 	entity.velocity = (entity.global_position - attack.attack_position).normalized() * attack.knockback_force
 	entity.applying_knockback = true

@@ -1,7 +1,9 @@
-res://Scripts
-res://Assets/Fonts
-res://Assets/Entities/Witch
 res://Scripts/Autoloads
+res://Scripts/UI
+res://Assets/Fonts
+res://Scenes
+res://Scripts
+res://Assets/Entities/Witch
 res://Scenes/UI
 res://Scripts/Spells
 res://Scripts/Components

@@ -26,4 +26,5 @@ func _on_area_entered(area):
 
 func _on_body_entered(body):
 	#print("collected")
+	SfxAudio.fragmentCollected.emit()
 	queue_free()

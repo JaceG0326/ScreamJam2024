@@ -1,0 +1,70 @@
+[gd_scene load_steps=7 format=3 uid="uid://btd0cvxictbs"]
+
+[ext_resource type="Script" path="res://Scripts/Autoloads/SfxAudioManager.gd" id="1_cew2u"]
+[ext_resource type="FontFile" uid="uid://o2doek7eb47s" path="res://Assets/Fonts/MatchupPro.ttf" id="1_rgv32"]
+[ext_resource type="PackedScene" uid="uid://c4j2fl16v3ui2" path="res://Scenes/Levels/testLevel.tscn" id="1_sbvpw"]
+[ext_resource type="Script" path="res://Scripts/UI/levelClock.gd" id="2_qf0p8"]
+
+[sub_resource type="Theme" id="Theme_fkkom"]
+default_font = ExtResource("1_rgv32")
+default_font_size = 32
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qx2kl"]
+content_margin_left = 16.0
+content_margin_top = 8.0
+content_margin_right = 16.0
+content_margin_bottom = 8.0
+bg_color = Color(0, 0, 0, 0.603922)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+
+[node name="Game" type="Node"]
+
+[node name="MusicHandler" type="AudioStreamPlayer" parent="."]
+process_mode = 3
+
+[node name="SfxHandler" type="Node" parent="."]
+process_mode = 3
+script = ExtResource("1_cew2u")
+
+[node name="UI" type="CanvasLayer" parent="."]
+
+[node name="HUD" type="Control" parent="UI"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_fkkom")
+
+[node name="MarginContainer" type="MarginContainer" parent="UI/HUD"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 16
+
+[node name="PanelContainer" type="PanelContainer" parent="UI/HUD/MarginContainer"]
+custom_minimum_size = Vector2(160, 42)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_qx2kl")
+
+[node name="HSplitContainer" type="HSplitContainer" parent="UI/HUD/MarginContainer/PanelContainer"]
+layout_mode = 2
+
+[node name="Time" type="Label" parent="UI/HUD/MarginContainer/PanelContainer/HSplitContainer"]
+layout_mode = 2
+text = "TIME:"
+
+[node name="Clock" type="Label" parent="UI/HUD/MarginContainer/PanelContainer/HSplitContainer"]
+layout_mode = 2
+text = "200"
+horizontal_alignment = 2
+script = ExtResource("2_qf0p8")
+
+[node name="TestLevel" parent="." instance=ExtResource("1_sbvpw")]
