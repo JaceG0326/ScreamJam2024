@@ -1,9 +1,10 @@
+Label
 VBoxContainer
+RichTextLabel
 AudioStreamPlayer
 Node
 HSplitContainer
 PanelContainer
-Label
 Timer
 MarginContainer
 Control
@@ -11,5 +12,3 @@ CanvasLayer
 CollisionShape2D
 Area2D
 Node2D
-Panel
-AnimatedSprite2D

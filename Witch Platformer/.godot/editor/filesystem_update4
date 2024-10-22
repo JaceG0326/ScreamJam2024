@@ -22,3 +22,4 @@ res://Scripts/UI/levelScore.gd
 res://Scripts/Autoloads/PlayerStats.gd
 res://Scripts/Spells/spellProjectile.gd
 res://Scripts/Entities/skeleton.gd
+res://Scripts/UI/uiHandler.gd
