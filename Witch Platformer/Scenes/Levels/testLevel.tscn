@@ -2320,10 +2320,10 @@ size = Vector2(352, 160)
 size = Vector2(456, 160)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_r0l1h"]
-size = Vector2(400, 256)
+size = Vector2(360, 256)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rm4sg"]
-size = Vector2(248, 256)
+size = Vector2(288, 256)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0jgdw"]
 size = Vector2(50, 197)
@@ -2362,7 +2362,6 @@ layer_2/z_index = 1
 layer_2/tile_data = PackedInt32Array(1376321, 851968, 18, 1310785, 851968, 18, 1245249, 851968, 18, 1179713, 917504, 18, 1114177, 917504, 17, 1376327, 917504, 20, 1310791, 917504, 19, 1179719, 917504, 20, 1114183, 917504, 17, 1245255, 851968, 18, 1441853, 131072, 26, 1179698, 393216, 26, 1179699, 458752, 26, 1179700, 524288, 26, 1441857, 786432, 19, 1441863, 851968, 18, 1507399, 851968, 18, 1572935, 851968, 18, 1638471, 851968, 18, 1704007, 851968, 18, 786511, 655360, 268435472)
 
 [node name="Rooms" type="Node2D" parent="."]
-visible = false
 
 [node name="Room1" type="Area2D" parent="Rooms"]
 collision_layer = 16
@@ -2382,14 +2381,14 @@ shape = SubResource("RectangleShape2D_xer7u")
 collision_layer = 16
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Rooms/Room3"]
-position = Vector2(1008, 248)
+position = Vector2(988, 248)
 shape = SubResource("RectangleShape2D_r0l1h")
 
 [node name="Room4" type="Area2D" parent="Rooms"]
 collision_layer = 16
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Rooms/Room4"]
-position = Vector2(1332, 248)
+position = Vector2(1312, 248)
 shape = SubResource("RectangleShape2D_rm4sg")
 
 [node name="LevelBackground" type="CanvasLayer" parent="."]

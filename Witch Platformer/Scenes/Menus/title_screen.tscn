@@ -1,0 +1,216 @@
+[gd_scene load_steps=10 format=3 uid="uid://b80tm7m4buvc8"]
+
+[ext_resource type="Script" path="res://Scripts/UI/titleScreen.gd" id="1_dnecr"]
+[ext_resource type="Texture2D" uid="uid://d3r446gqbry3k" path="res://Assets/Tileset/Premium/BG_3/BG_3.png" id="2_hp5iv"]
+[ext_resource type="Texture2D" uid="uid://bgipnmpb3oipo" path="res://Assets/Tileset/Premium/BG_2/BG_2_alt_1.png" id="3_ca7k1"]
+[ext_resource type="Texture2D" uid="uid://b13w3pu6wjf1r" path="res://Assets/Tileset/Premium/BG_1/BG_1_loop_alt_2.png" id="4_x1bkr"]
+[ext_resource type="FontFile" uid="uid://o2doek7eb47s" path="res://Assets/Fonts/MatchupPro.ttf" id="5_lsx6t"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_tqdpd"]
+
+[sub_resource type="Theme" id="Theme_5hygf"]
+default_font = ExtResource("5_lsx6t")
+default_font_size = 64
+
+[sub_resource type="Theme" id="Theme_cx1b3"]
+default_font = ExtResource("5_lsx6t")
+default_font_size = 64
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2ckwj"]
+content_margin_left = 16.0
+content_margin_top = 16.0
+content_margin_right = 16.0
+content_margin_bottom = 16.0
+bg_color = Color(0, 0, 0, 0.435294)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[node name="TitleScreen" type="Node2D"]
+script = ExtResource("1_dnecr")
+parallax_move_speed = 120
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+position = Vector2(300, 200)
+
+[node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+shape = SubResource("CircleShape2D_tqdpd")
+
+[node name="LevelBackground" type="CanvasLayer" parent="."]
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="LevelBackground"]
+
+[node name="CanvasModulate" type="CanvasModulate" parent="LevelBackground/ParallaxBackground"]
+color = Color(0.890196, 0.552941, 0.866667, 1)
+
+[node name="ParallaxLayer3" type="ParallaxLayer" parent="LevelBackground/ParallaxBackground"]
+position = Vector2(-256, 0)
+motion_scale = Vector2(0.25, 1)
+motion_mirroring = Vector2(2048, 0)
+
+[node name="Bg3" type="Sprite2D" parent="LevelBackground/ParallaxBackground/ParallaxLayer3"]
+texture = ExtResource("2_hp5iv")
+centered = false
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="LevelBackground/ParallaxBackground"]
+position = Vector2(-256, 0)
+motion_scale = Vector2(0.35, 1)
+motion_mirroring = Vector2(2029, 0)
+
+[node name="Bg2Alt1" type="Sprite2D" parent="LevelBackground/ParallaxBackground/ParallaxLayer2"]
+texture = ExtResource("3_ca7k1")
+centered = false
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="LevelBackground/ParallaxBackground"]
+position = Vector2(-256, 0)
+motion_scale = Vector2(0.5, 1)
+motion_mirroring = Vector2(2048, 0)
+
+[node name="Bg1LoopAlt2" type="Sprite2D" parent="LevelBackground/ParallaxBackground/ParallaxLayer"]
+texture = ExtResource("4_x1bkr")
+centered = false
+
+[node name="UI" type="CanvasLayer" parent="."]
+
+[node name="StartScreen" type="Control" parent="UI"]
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_5hygf")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UI/StartScreen"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -248.0
+offset_top = -118.0
+offset_right = 248.0
+offset_bottom = 118.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 64
+
+[node name="Title" type="Label" parent="UI/StartScreen/VBoxContainer"]
+custom_minimum_size = Vector2(200, 64)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.584314, 0.568627, 1, 1)
+theme_override_colors/font_shadow_color = Color(1, 1, 1, 1)
+theme_override_constants/shadow_outline_size = 4
+theme_override_font_sizes/font_size = 128
+text = "Witch Hunt
+"
+horizontal_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UI/StartScreen/VBoxContainer"]
+layout_mode = 2
+
+[node name="Start" type="Button" parent="UI/StartScreen/VBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(212, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Start"
+
+[node name="Options" type="Button" parent="UI/StartScreen/VBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(212, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Options"
+
+[node name="OptionsScreen" type="Control" parent="UI"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_cx1b3")
+
+[node name="MarginContainer" type="MarginContainer" parent="UI/OptionsScreen"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_top = 64
+theme_override_constants/margin_bottom = 64
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UI/OptionsScreen/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="Label" type="Label" parent="UI/OptionsScreen/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Options"
+horizontal_alignment = 1
+
+[node name="PanelContainer" type="PanelContainer" parent="UI/OptionsScreen/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_styles/panel = SubResource("StyleBoxFlat_2ckwj")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UI/OptionsScreen/MarginContainer/VBoxContainer/PanelContainer"]
+layout_mode = 2
+
+[node name="MusicVolume" type="HBoxContainer" parent="UI/OptionsScreen/MarginContainer/VBoxContainer/PanelContainer/VBoxContainer"]
+custom_minimum_size = Vector2(360, 0)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="UI/OptionsScreen/MarginContainer/VBoxContainer/PanelContainer/VBoxContainer/MusicVolume"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "Music Volume"
+uppercase = true
+
+[node name="MusicVolumeSlider" type="HSlider" parent="UI/OptionsScreen/MarginContainer/VBoxContainer/PanelContainer/VBoxContainer/MusicVolume"]
+custom_minimum_size = Vector2(128, 0)
+layout_mode = 2
+size_flags_horizontal = 10
+size_flags_vertical = 4
+max_value = 1.0
+step = 0.1
+value = 0.5
+
+[node name="EffectsVolume" type="HBoxContainer" parent="UI/OptionsScreen/MarginContainer/VBoxContainer/PanelContainer/VBoxContainer"]
+custom_minimum_size = Vector2(360, 0)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="UI/OptionsScreen/MarginContainer/VBoxContainer/PanelContainer/VBoxContainer/EffectsVolume"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "Effects Volume"
+uppercase = true
+
+[node name="EffectsVolumeSlider" type="HSlider" parent="UI/OptionsScreen/MarginContainer/VBoxContainer/PanelContainer/VBoxContainer/EffectsVolume"]
+custom_minimum_size = Vector2(128, 0)
+layout_mode = 2
+size_flags_horizontal = 10
+size_flags_vertical = 4
+max_value = 1.0
+step = 0.1
+value = 0.5
+
+[node name="Back" type="Button" parent="UI/OptionsScreen/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(212, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 10
+theme_override_font_sizes/font_size = 32
+text = "Back"
+
+[connection signal="pressed" from="UI/StartScreen/VBoxContainer/VBoxContainer/Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="UI/StartScreen/VBoxContainer/VBoxContainer/Options" to="." method="_on_options_pressed"]
+[connection signal="value_changed" from="UI/OptionsScreen/MarginContainer/VBoxContainer/PanelContainer/VBoxContainer/MusicVolume/MusicVolumeSlider" to="." method="_on_music_volume_slider_value_changed"]
+[connection signal="value_changed" from="UI/OptionsScreen/MarginContainer/VBoxContainer/PanelContainer/VBoxContainer/EffectsVolume/EffectsVolumeSlider" to="." method="_on_effects_volume_slider_value_changed"]
+[connection signal="pressed" from="UI/OptionsScreen/MarginContainer/VBoxContainer/Back" to="." method="_on_back_pressed"]

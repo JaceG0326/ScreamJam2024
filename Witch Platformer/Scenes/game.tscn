@@ -1,8 +1,8 @@
-[gd_scene load_steps=9 format=3 uid="uid://btd0cvxictbs"]
+[gd_scene load_steps=13 format=3 uid="uid://btd0cvxictbs"]
 
+[ext_resource type="Script" path="res://Scripts/Autoloads/GameManager.gd" id="1_56ln6"]
 [ext_resource type="Script" path="res://Scripts/Autoloads/SfxAudioManager.gd" id="1_cew2u"]
 [ext_resource type="FontFile" uid="uid://o2doek7eb47s" path="res://Assets/Fonts/MatchupPro.ttf" id="1_rgv32"]
-[ext_resource type="PackedScene" uid="uid://c4j2fl16v3ui2" path="res://Scenes/Levels/testLevel.tscn" id="1_sbvpw"]
 [ext_resource type="Script" path="res://Scripts/UI/uiHandler.gd" id="2_osxot"]
 [ext_resource type="Script" path="res://Scripts/UI/levelClock.gd" id="2_qf0p8"]
 [ext_resource type="Script" path="res://Scripts/UI/levelScore.gd" id="4_bok1y"]
@@ -22,19 +22,45 @@ border_width_top = 2
 border_width_right = 2
 border_width_bottom = 2
 
+[sub_resource type="Theme" id="Theme_hfbht"]
+default_font = ExtResource("1_rgv32")
+default_font_size = 32
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_16gll"]
+bg_color = Color(0, 0, 0, 0.392157)
+
+[sub_resource type="Theme" id="Theme_ehlpk"]
+default_font = ExtResource("1_rgv32")
+default_font_size = 64
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_iiiny"]
+content_margin_left = 16.0
+content_margin_top = 16.0
+content_margin_right = 16.0
+content_margin_bottom = 16.0
+bg_color = Color(0, 0, 0, 0.435294)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
 [node name="Game" type="Node"]
+script = ExtResource("1_56ln6")
 
 [node name="MusicHandler" type="AudioStreamPlayer" parent="."]
 process_mode = 3
+bus = &"Music"
 
 [node name="SfxHandler" type="Node" parent="."]
 process_mode = 3
 script = ExtResource("1_cew2u")
 
 [node name="UI" type="CanvasLayer" parent="."]
+process_mode = 3
 script = ExtResource("2_osxot")
 
 [node name="HUD" type="Control" parent="UI"]
+visible = false
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -94,6 +120,7 @@ layout_mode = 2
 text = "TIME:"
 
 [node name="Clock" type="Label" parent="UI/HUD/MarginContainer/VBoxContainer/PanelContainer/VBoxContainer/Time"]
+process_mode = 1
 layout_mode = 2
 text = "200"
 horizontal_alignment = 2
@@ -112,4 +139,162 @@ text = "0"
 horizontal_alignment = 2
 script = ExtResource("4_bok1y")
 
-[node name="TestLevel" parent="." instance=ExtResource("1_sbvpw")]
+[node name="PauseMenu" type="Control" parent="UI"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_hfbht")
+
+[node name="Panel" type="Panel" parent="UI/PauseMenu"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_16gll")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UI/PauseMenu"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -120.0
+offset_top = -38.0
+offset_right = 120.0
+offset_bottom = 38.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Pause" type="Label" parent="UI/PauseMenu/VBoxContainer"]
+custom_minimum_size = Vector2(200, 64)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.584314, 0.568627, 1, 1)
+theme_override_colors/font_shadow_color = Color(1, 1, 1, 1)
+theme_override_constants/shadow_outline_size = 4
+theme_override_font_sizes/font_size = 96
+text = "Paused
+ "
+horizontal_alignment = 1
+uppercase = true
+
+[node name="Back" type="Button" parent="UI/PauseMenu/VBoxContainer"]
+custom_minimum_size = Vector2(160, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Back"
+
+[node name="Options" type="Button" parent="UI/PauseMenu/VBoxContainer"]
+custom_minimum_size = Vector2(160, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Options"
+
+[node name="Retry" type="Button" parent="UI/PauseMenu/VBoxContainer"]
+custom_minimum_size = Vector2(160, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Retry"
+
+[node name="Quit" type="Button" parent="UI/PauseMenu/VBoxContainer"]
+custom_minimum_size = Vector2(160, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Quit"
+
+[node name="OptionsScreen" type="Control" parent="UI"]
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_ehlpk")
+
+[node name="MarginContainer" type="MarginContainer" parent="UI/OptionsScreen"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_top = 64
+theme_override_constants/margin_bottom = 64
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UI/OptionsScreen/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="Label" type="Label" parent="UI/OptionsScreen/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Options"
+horizontal_alignment = 1
+
+[node name="PanelContainer" type="PanelContainer" parent="UI/OptionsScreen/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_styles/panel = SubResource("StyleBoxFlat_iiiny")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UI/OptionsScreen/MarginContainer/VBoxContainer/PanelContainer"]
+layout_mode = 2
+
+[node name="MusicVolume" type="HBoxContainer" parent="UI/OptionsScreen/MarginContainer/VBoxContainer/PanelContainer/VBoxContainer"]
+custom_minimum_size = Vector2(360, 0)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="UI/OptionsScreen/MarginContainer/VBoxContainer/PanelContainer/VBoxContainer/MusicVolume"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "Music Volume"
+uppercase = true
+
+[node name="MusicVolumeSlider" type="HSlider" parent="UI/OptionsScreen/MarginContainer/VBoxContainer/PanelContainer/VBoxContainer/MusicVolume"]
+custom_minimum_size = Vector2(128, 0)
+layout_mode = 2
+size_flags_horizontal = 10
+size_flags_vertical = 4
+max_value = 1.0
+step = 0.1
+value = 0.5
+
+[node name="EffectsVolume" type="HBoxContainer" parent="UI/OptionsScreen/MarginContainer/VBoxContainer/PanelContainer/VBoxContainer"]
+custom_minimum_size = Vector2(360, 0)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="UI/OptionsScreen/MarginContainer/VBoxContainer/PanelContainer/VBoxContainer/EffectsVolume"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "Effects Volume"
+uppercase = true
+
+[node name="EffectsVolumeSlider" type="HSlider" parent="UI/OptionsScreen/MarginContainer/VBoxContainer/PanelContainer/VBoxContainer/EffectsVolume"]
+custom_minimum_size = Vector2(128, 0)
+layout_mode = 2
+size_flags_horizontal = 10
+size_flags_vertical = 4
+max_value = 1.0
+step = 0.1
+value = 0.5
+
+[node name="Back" type="Button" parent="UI/OptionsScreen/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(212, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 10
+theme_override_font_sizes/font_size = 32
+text = "Back"
+
+[connection signal="pressed" from="UI/PauseMenu/VBoxContainer/Back" to="UI" method="_on_back_pressed"]
+[connection signal="pressed" from="UI/PauseMenu/VBoxContainer/Options" to="UI" method="_on_options_pressed"]
+[connection signal="pressed" from="UI/PauseMenu/VBoxContainer/Retry" to="UI" method="_on_retry_pressed"]
+[connection signal="pressed" from="UI/PauseMenu/VBoxContainer/Quit" to="." method="_on_quit_pressed"]
+[connection signal="value_changed" from="UI/OptionsScreen/MarginContainer/VBoxContainer/PanelContainer/VBoxContainer/MusicVolume/MusicVolumeSlider" to="UI" method="_on_music_volume_slider_value_changed"]
+[connection signal="value_changed" from="UI/OptionsScreen/MarginContainer/VBoxContainer/PanelContainer/VBoxContainer/EffectsVolume/EffectsVolumeSlider" to="UI" method="_on_effects_volume_slider_value_changed"]
+[connection signal="pressed" from="UI/OptionsScreen/MarginContainer/VBoxContainer/Back" to="UI" method="_on_options_back_pressed"]

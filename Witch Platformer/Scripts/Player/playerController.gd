@@ -33,6 +33,10 @@ func _ready():
 	set_collision_mask_value(8, true)
 	
 	Global.platforming_player = self
+	Global.level_start = true
+	if Global.restarting:
+		Stats.score = 0
+		Global.restarting = false
 
 func _physics_process(delta):
 	if not is_on_floor():
@@ -146,7 +150,8 @@ func on_hit():
 
 func on_death():
 	print("Dead")
-	Stats.score -= 50
+	if !Global.restarting:
+		Stats.score -= 50
 	get_tree().reload_current_scene()
 
 func spawn_projectile():

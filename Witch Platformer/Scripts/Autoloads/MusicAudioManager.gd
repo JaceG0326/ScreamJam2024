@@ -12,6 +12,7 @@ var volume = 0.5:
 	set = set_volume
 
 func _ready():
+	bus = "Music"
 	process_mode = Node.PROCESS_MODE_ALWAYS
 	levelStart.connect(play_sound.bind(levelMusic))
 	levelFinished.connect(play_sound.bind(levelCompletedMusic))
@@ -33,6 +34,7 @@ func set_volume(new_volume):
 	volume = new_volume
 	for audio_stream_player in get_children():
 		audio_stream_player.volume_db = _linear_to_db(volume)
+	AudioServer.set_bus_volume_db(AudioServer.get_bus_index("Music"), _linear_to_db(volume))
 
 func _linear_to_db(linear_volume):
 	if linear_volume == 0.5:

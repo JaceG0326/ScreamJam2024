@@ -24,18 +24,17 @@ func _ready():
 	fragmentCollected.connect(play_sound.bind(collectFragmentSound))
 	chargingSpell.connect(play_sound.bind(chargeSpell))
 	finishedCharging.connect(play_sound.bind(releaseSpell))
-	base_volume = volume
 
 func play_sound(sound: AudioStreamWAV, pitch = 1.0):
-	volume = base_volume
 	var audio_stream_player = AudioStreamPlayer.new()
+	audio_stream_player.bus = "Effects"
 	audio_stream_player.stream = sound
 	audio_stream_player.pitch_scale = pitch
 	audio_stream_player.volume_db = _linear_to_db(volume)
 	audio_stream_player.connect("finished", _on_audio_player_finished.bind(audio_stream_player))
 	add_child(audio_stream_player)
 	audio_stream_player.play()
-	fade_volume(0.0, sound.get_length())
+	#fade_volume(0.0, sound.get_length())
 
 func fade_volume(target_volume, time_in_seconds):
 	var tween = create_tween()
@@ -49,6 +48,7 @@ func set_volume(new_volume):
 	volume = new_volume
 	for audio_stream_player in get_children():
 		audio_stream_player.volume_db = _linear_to_db(volume)
+	AudioServer.set_bus_volume_db(AudioServer.get_bus_index("Effects"), _linear_to_db(volume))
 
 func _linear_to_db(linear_volume):
 	if linear_volume == 0.5:

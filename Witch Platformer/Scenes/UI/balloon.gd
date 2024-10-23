@@ -32,7 +32,7 @@ var dialogue_line: DialogueLine:
 
 		# The dialogue has finished so close the balloon
 		if not next_dialogue_line:
-			ui.show()
+			if ui: ui.show()
 			get_tree().paused = false
 			queue_free()
 			return
