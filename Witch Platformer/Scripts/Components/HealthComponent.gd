@@ -12,7 +12,7 @@ func damage(attack: Attack):
 	print(health)
 	
 	var entity = get_parent()
-	if entity is Skeleton:
+	if entity is Enemy:
 		if health <= 0:
 			entity.is_dead = true
 		entity.is_hit = true

@@ -1,7 +1,7 @@
 extends State
 class_name EnemyFollow
 
-@export var enemy : CharacterBody2D
+@export var enemy : Enemy
 @export var move_speed := 30.0
 var player : Witch
 
@@ -18,7 +18,7 @@ func Physics_Update(delta: float):
 	var dir = (player.global_position - enemy.global_position)
 	
 	if dir.length() < 240:
-		if dir.length() < 64:
+		if dir.length() < enemy.attack_range:
 			if enemy is Skeleton:
 				if player.attacked_charged and !enemy.on_block_cooldown:
 					var block_roll = randi_range(1, 7)

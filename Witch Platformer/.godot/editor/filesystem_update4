@@ -30,3 +30,13 @@ res://Scenes/Menus/title_screen.tscn
 res://Scripts/UI/titleScreen.gd
 res://Scripts/UI/volumeSlider.gd
 res://default_bus_layout.tres
+res://Objects/Entities/Enemies/mushroom.tscn
+res://Scripts/Entities/enemy.gd
+res://Scripts/Entities/mushroom.gd
+res://Scripts/States/enemyAttack.gd
+res://Scripts/States/enemyBlock.gd
+res://Scripts/States/enemyDeath.gd
+res://Scenes/Levels/level2.tscn
+res://Scripts/States/enemyFollow.gd
+res://Scripts/States/enemyIdle.gd
+res://Scripts/layerTriggers.gd

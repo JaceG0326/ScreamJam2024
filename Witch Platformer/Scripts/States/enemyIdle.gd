@@ -4,7 +4,7 @@ class_name EnemyIdle
 var move_direction : Vector2
 var wander_time : float
 
-@export var enemy : CharacterBody2D
+@export var enemy : Enemy
 @export var move_speed := 10.0
 @export var right_ground_sensor : RayCast2D
 @export var right_wall_sensor : RayCast2D

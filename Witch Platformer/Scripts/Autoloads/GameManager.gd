@@ -18,6 +18,8 @@ func _next_level():
 		Global.platforming_player = null
 		Global.player_camera = null
 		get_tree().reload_current_scene()
+	else:
+		Global.current_level_id -= 1
 	return
 
 func _on_quit_pressed():

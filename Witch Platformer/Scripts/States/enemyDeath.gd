@@ -5,7 +5,7 @@ class_name EnemyDeath
 
 func Enter():
 	enemy.velocity = Vector2.ZERO
-	if enemy is Skeleton:
+	if enemy is Enemy:
 		enemy.anim.play("death")
 	else:
 		queue_free()

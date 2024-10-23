@@ -1,11 +1,8 @@
 extends State
 class_name EnemyAttack
 
-@export var enemy : CharacterBody2D
-@export var cooldown := 2.0
-
-var on_cooldown = false
-var cooldown_timer := 0.0
+@export var enemy : Enemy
+\
 var player : CharacterBody2D
 
 func Enter():
@@ -22,22 +19,28 @@ func Physics_Update(delta: float):
 	
 	if player.is_dead:
 		Transitioned.emit(self, "enemyidle")
+		return
 	
-	if dir.length() < 64:
+	if dir.length() < enemy.attack_range:
 		enemy.velocity.x = 0
-		if enemy is Skeleton:
-			if !on_cooldown:
+		if enemy is Enemy:
+			if !enemy.on_cooldown:
 				enemy.attack()
-				on_cooldown = true
+				enemy.on_cooldown = true
 			else:
-				if !enemy.anim.is_playing():
+				if !enemy.anim.current_animation != "idle":
+					await enemy.anim.animation_finished
 					enemy.anim.play("idle")
-				if cooldown_timer < cooldown:
-					cooldown_timer += delta
+					return
+				if enemy.attack_timer < enemy.attack_cooldown:
+					enemy.attack_timer += delta
+					return
 				else:
-					on_cooldown = false
-					cooldown_timer = 0.0
+					enemy.on_cooldown = false
+					enemy.attack_timer = 0.0
+					return
 	else:
-		on_cooldown = false
-		cooldown_timer = 0.0
+		enemy.on_cooldown = false
+		enemy.attack_timer = 0.0
 		Transitioned.emit(self, "enemyfollow")
+		return

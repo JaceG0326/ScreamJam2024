@@ -1,7 +1,7 @@
 extends State
 class_name EnemyBlock
 
-@export var enemy : CharacterBody2D
+@export var enemy : Enemy
 var player : Witch
 
 func Enter():

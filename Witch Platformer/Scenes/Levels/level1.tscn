@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://d0gw2gaddxoqs"]
+[gd_scene load_steps=20 format=3 uid="uid://d0gw2gaddxoqs"]
 
 [ext_resource type="PackedScene" uid="uid://crkdxf6dvr8su" path="res://Objects/Entities/witch.tscn" id="1_2quu5"]
 [ext_resource type="Script" path="res://Scripts/levelCamera.gd" id="2_1uq5r"]
@@ -2338,6 +2338,9 @@ size = Vector2(1728, 56)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lgel7"]
 size = Vector2(96, 192)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_d52y4"]
+size = Vector2(24, 256)
+
 [node name="Level1" type="Node2D"]
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
@@ -2455,5 +2458,22 @@ collision_layer = 2048
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Goal"]
 position = Vector2(1200, 176)
 shape = SubResource("RectangleShape2D_lgel7")
+
+[node name="LevelBarriers" type="Node2D" parent="."]
+visible = false
+
+[node name="Left" type="StaticBody2D" parent="LevelBarriers"]
+collision_layer = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LevelBarriers/Left"]
+position = Vector2(-32, 208)
+shape = SubResource("RectangleShape2D_d52y4")
+
+[node name="Right" type="StaticBody2D" parent="LevelBarriers"]
+collision_layer = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LevelBarriers/Right"]
+position = Vector2(1256, 208)
+shape = SubResource("RectangleShape2D_d52y4")
 
 [connection signal="body_entered" from="DeathBarrier" to="DeathBarrier" method="_on_body_entered"]

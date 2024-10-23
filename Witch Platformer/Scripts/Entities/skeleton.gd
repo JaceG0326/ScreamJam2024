@@ -1,28 +1,16 @@
-extends CharacterBody2D
+extends Enemy
 class_name Skeleton
 
-@onready var anim = $AnimationPlayer
 @onready var sprite = $Sprite2D
 @onready var sword = $SwordHitbox
 @onready var hitbox = $HitboxComponent
 @onready var shield = $ShieldComponent
 @onready var collision = $CollisionShape2D
 
-var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
-
-@export var damage := 10.0
-@export var knockback_force := 200.0
-@export var stun_time := 1.5
-@export var attacK_cooldown := 3.0
 @export var block_cooldown := 3.0
 @export var block_chance := 3
 
-var is_dead = false
-var is_hit = false
 var shield_hit = false
-var applying_knockback = false
-var on_cooldown = false
-var attack_timer := 0.0
 var block_timer := 0.0
 var on_block_cooldown = false
 
@@ -56,10 +44,6 @@ func _physics_process(delta):
 
 func attack():
 	anim.play("attack")
-
-func die():
-	Stats.score += 20
-	queue_free()
 
 func _on_sword_hitbox_area_entered(area):
 	if area is HitboxComponent:

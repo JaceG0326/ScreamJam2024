@@ -76,7 +76,6 @@ centered = false
 [node name="UI" type="CanvasLayer" parent="."]
 
 [node name="StartScreen" type="Control" parent="UI"]
-visible = false
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -127,6 +126,7 @@ size_flags_horizontal = 4
 text = "Options"
 
 [node name="OptionsScreen" type="Control" parent="UI"]
+visible = false
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0

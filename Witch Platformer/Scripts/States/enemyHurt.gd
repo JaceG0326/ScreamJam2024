@@ -1,7 +1,7 @@
 extends State
 class_name EnemyHurt
 
-@export var enemy : CharacterBody2D
+@export var enemy : Enemy
 
 func Enter():
 	enemy.velocity = Vector2.ZERO

@@ -4,7 +4,10 @@ extends Node
 var player_camera : Camera2D = null
 var platforming_player : Witch = null
 
-@onready var levels : Array[PackedScene] = [preload("res://Scenes/Menus/title_screen.tscn"), preload("res://Scenes/Levels/testLevel.tscn"), preload("res://Scenes/Levels/level1.tscn")]
+@onready var levels : Array[PackedScene] = [preload("res://Scenes/Menus/title_screen.tscn"), 
+											preload("res://Scenes/Levels/testLevel.tscn"), 
+											preload("res://Scenes/Levels/level1.tscn"),
+											preload("res://Scenes/Levels/level2.tscn")]
 
 var level_start = false
 var level_finished = false
@@ -39,5 +42,6 @@ func change_room(room_position: Vector2, room_size: Vector2) -> void:
 			#get_tree().paused = false
 
 func reload_level():
+	level_finished = false
 	restarting = true
 	platforming_player.is_dead = true

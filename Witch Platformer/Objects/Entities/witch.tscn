@@ -464,7 +464,7 @@ size = Vector2(30, 41)
 
 [node name="Witch" type="CharacterBody2D"]
 position = Vector2(292, 332)
-collision_mask = 1030
+collision_mask = 7838
 script = ExtResource("1_x72ns")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
